@@ -49,11 +49,22 @@ export type PublicResource = {
   lifespan: string; organism_scope: string; identifier: string; identifier_url: string;
   url: string; size_scope: string; access_modality: string; summary: string;
   access_note: string; verified: string;
+  data_type: "raw-reads" | "assembled-catalog" | "reference" | "taxonomy" | "";
+  download_method: string; pull_target: string; license: string;
+  reanalysis_ready: "yes" | "partial" | "";
 };
 export type PublicData = {
   count: number; counts_by_category: Record<string, number>;
-  counts_by_tier: Record<string, number>; site_filters: string[];
+  counts_by_tier: Record<string, number>; counts_by_ready: Record<string, number>;
+  counts_by_data_type: Record<string, number>; site_filters: string[];
   resources: PublicResource[]; note: string; data_as_of: string;
+};
+
+export const DATA_TYPE_LABEL: Record<string, string> = {
+  "raw-reads": "raw reads",
+  "assembled-catalog": "catalog",
+  reference: "reference",
+  taxonomy: "taxonomy",
 };
 
 export const PROGRAM = program as Program;
