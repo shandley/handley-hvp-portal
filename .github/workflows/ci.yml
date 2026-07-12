@@ -1,0 +1,60 @@
+name: CI
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    name: Build and voice lint
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up pnpm
+        uses: pnpm/action-setup@v4
+        with:
+          version: 11
+
+      - name: Set up Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: pnpm
+
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile
+
+      - name: Build
+        run: pnpm build
+
+      - name: Voice lint
+        run: |
+          lint_status=0
+
+          # 1) Em-dashes and en-dashes in prose. Scope to app/ and components/ only.
+          # data/*.json is intentionally excluded: year ranges like "2024-2028" are
+          # legitimate DATA in their native en-dash form, not AI-tell prose.
+          echo "Checking for em-dashes / en-dashes in app/ and components/ ..."
+          if grep -rnI -E '—|–' app components; then
+            echo "::error::Found em-dash or en-dash in prose. Rewrite with a comma, colon, parentheses, or two sentences (see VOICE.md)."
+            lint_status=1
+          else
+            echo "OK: no em-dashes or en-dashes."
+          fi
+
+          # 2) Banned marketing words (case-insensitive) in app/, components/, lib/.
+          echo "Checking for banned marketing words in app/, components/, lib/ ..."
+          if grep -rnI -iE 'cutting-edge|robust|leverage|utilize|streamline|seamless|unlock|empower|harness|dive in|game-changing|revolutionize|supercharge' app components lib; then
+            echo "::error::Found a banned marketing word (see the list in this workflow and VOICE.md). Rewrite in plain, expository prose."
+            lint_status=1
+          else
+            echo "OK: no banned marketing words."
+          fi
+
+          exit $lint_status

@@ -38,6 +38,22 @@ The generator enforces two rules that this site depends on:
 - **Gated datasets.** Each BioProject carries a `release_status`; individual datasets
   are only featured or reanalyzed once verified public (open SRA vs controlled dbGaP).
 
+## Contributing and deploys
+Pushing to `main` auto-deploys to production on Vercel. There is no manual promotion
+step, so a bad commit on `main` ships immediately.
+
+Prefer opening a pull request instead of committing straight to `main`. Two things then
+validate the change before it reaches production:
+
+- CI (`.github/workflows/ci.yml`) runs on every PR: it installs with a frozen lockfile,
+  runs `pnpm build`, and runs a voice lint that fails on em/en-dashes in prose under
+  `app/` and `components/` and on the banned marketing words from `VOICE.md`.
+- Vercel posts a preview deployment URL on the PR, so you can review the rendered site
+  before merging.
+
+Merge to `main` only after CI is green and the preview looks right. CI also runs on the
+push to `main` as a backstop, but the point is to catch problems on the PR first.
+
 ## Branding
 `public/logo-placeholder.svg` is a placeholder mark. Swap for real Handley Lab
 branding. Keep the "independent synthesis, not an official HVP product" framing and do

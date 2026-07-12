@@ -20,8 +20,7 @@
     "Neuro/CSF",
     "Multi-site",
     "Reference/taxonomy",
-    "Cross-cutting",
-    "Other"
+    "Cross-cutting"
   ],
   "resources": [
     {
@@ -73,7 +72,7 @@
       "tier": "core",
       "body_sites": "environmental and host-associated",
       "site_tags": [
-        "Other"
+        "Cross-cutting"
       ],
       "lifespan": "N/A",
       "organism_scope": "all viruses (uncultivated virus genomes)",
@@ -266,7 +265,7 @@
       "tier": "useful",
       "body_sites": "human-associated (panel design)",
       "site_tags": [
-        "Other"
+        "Cross-cutting"
       ],
       "lifespan": "N/A",
       "organism_scope": "curated human-infecting virus genomes",
@@ -285,7 +284,7 @@
       "tier": "useful",
       "body_sites": "Host-linkage reference applicable to any body site",
       "site_tags": [
-        "Other"
+        "Cross-cutting"
       ],
       "lifespan": "N/A",
       "organism_scope": "Prokaryotic (archaeal and bacterial) host genomes; phage-host inference signal from CRISPR spacers, k-mer composition, and homology",

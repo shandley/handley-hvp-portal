@@ -199,7 +199,8 @@ export default function Page() {
           </p>
           <p className="prose muted" style={{ marginBottom: "1.6rem", fontSize: "0.86rem" }}>
             This is a curated selection, not a complete index. Every identifier was checked against
-            CrossRef, DataCite, or NCBI; each entry links to the source. Filter by body site below.
+            CrossRef, DataCite, or NCBI as of <span className="mono">{PUBLIC_DATA.data_as_of}</span>;
+            each entry links to the source. Filter by body site below.
           </p>
           <PublicData />
         </div>
