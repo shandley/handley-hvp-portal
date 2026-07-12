@@ -1,0 +1,381 @@
+{
+  "counts_by_component": {
+    "Coordinating Center (CODCC)": 1,
+    "Functional Studies": 5,
+    "Tools and Methods": 10,
+    "Virome Characterization Center": 5
+  },
+  "total_awards": 21,
+  "awards": [
+    {
+      "grant": "U24HL175772",
+      "activity_code": "U24",
+      "component": "Coordinating Center (CODCC)",
+      "title": "A consortium facilitation, coordination, and data management center for the HVP",
+      "institution": "U Maryland IGS",
+      "region": "Northeast",
+      "pis": "Curtis Huttenhower; Owen R White",
+      "period": "2025\u20132029"
+    },
+    {
+      "grant": "U01AT012984",
+      "activity_code": "U01",
+      "component": "Functional Studies",
+      "title": "The Human DNA virome: from petabase scale to single-cell resolution",
+      "institution": "MSKCC",
+      "region": "Northeast",
+      "pis": "Caleb Andrew Lareau",
+      "period": "2024\u20132029"
+    },
+    {
+      "grant": "U01AT012993",
+      "activity_code": "U01",
+      "component": "Functional Studies",
+      "title": "Whole Body Deep Tissue Characterization of the Human Virome",
+      "institution": "UCSF",
+      "region": "West",
+      "pis": "Timothy Jensen Henrich; Zian H Tseng",
+      "period": "2024\u20132029"
+    },
+    {
+      "grant": "U01AT012990",
+      "activity_code": "U01",
+      "component": "Functional Studies",
+      "title": "Antibody targeting of the virome",
+      "institution": "U Utah",
+      "region": "West",
+      "pis": "June Louise Round; Zac Stephens",
+      "period": "2024\u20132029"
+    },
+    {
+      "grant": "U01AT012998",
+      "activity_code": "U01",
+      "component": "Functional Studies",
+      "title": "Functional characterization of viral-bacterial-human interactions during antimicrobial and inflammatory perturbations across different lifespans",
+      "institution": "WashU",
+      "region": "Midwest",
+      "pis": "Megan T Baldridge; Gautam Dantas",
+      "period": "2024\u20132029"
+    },
+    {
+      "grant": "U01AT012970",
+      "activity_code": "U01",
+      "component": "Functional Studies",
+      "title": "Dynamic changes in virome-host interactions during pregnancy and postpartum",
+      "institution": "WashU",
+      "region": "Midwest",
+      "pis": "Linda M Ernst; Molly Stout; Kristine M. Wylie",
+      "period": "2024\u20132029"
+    },
+    {
+      "grant": "U01DE034176",
+      "activity_code": "U01",
+      "component": "Tools and Methods",
+      "title": "Computational tools for illuminating the dark matter of the human virome",
+      "institution": "PNNL",
+      "region": "West",
+      "pis": "Jason Edward Mcdermott; Travis John Wheeler",
+      "period": "2024\u20132028"
+    },
+    {
+      "grant": "U01DE035622",
+      "activity_code": "U01",
+      "component": "Tools and Methods",
+      "title": "Computational methods for benchmarking and development of best practices for virus discovery and characterization in the HVP consortium",
+      "institution": "Broad Institute",
+      "region": "Northeast",
+      "pis": "Daniel John Park",
+      "period": "2026\u20132030"
+    },
+    {
+      "grant": "U01DE034199",
+      "activity_code": "U01",
+      "component": "Tools and Methods",
+      "title": "Viral MEM: Viral Enrichment and Precise Stochastic Quantification with Microbial Context Preservation for Rigorous Virome Analysis of Challenging Human Samples",
+      "institution": "Caltech",
+      "region": "West",
+      "pis": "Rustem F Ismagilov",
+      "period": "2024\u20132028"
+    },
+    {
+      "grant": "U01DE035635",
+      "activity_code": "U01",
+      "component": "Tools and Methods",
+      "title": "Developing computational, experimental and ecological approaches to study integrated phages and their hosts",
+      "institution": "Stanford",
+      "region": "West",
+      "pis": "Ami Siddharth Bhatt",
+      "period": "2026\u20132030"
+    },
+    {
+      "grant": "U01DE035632",
+      "activity_code": "U01",
+      "component": "Tools and Methods",
+      "title": "Hiding in plain sight: integrating AI with targeted bench methods to discover and characterize viruses in the human body",
+      "institution": "SUNY Buffalo",
+      "region": "Northeast",
+      "pis": "Kathryn M Kauffman; Libusha Kelly",
+      "period": "2026\u20132030"
+    },
+    {
+      "grant": "U01DE034179",
+      "activity_code": "U01",
+      "component": "Tools and Methods",
+      "title": "Concentration and single virion analysis of the virome",
+      "institution": "UNC Chapel Hill",
+      "region": "South",
+      "pis": "Dirk P Dittmer",
+      "period": "2024\u20132028"
+    },
+    {
+      "grant": "U01DE034196",
+      "activity_code": "U01",
+      "component": "Tools and Methods",
+      "title": "Advanced analytics for uncovering virus dynamics and functional potential",
+      "institution": "LBNL",
+      "region": "West",
+      "pis": "Nikos C Kyrpides",
+      "period": "2024\u20132028"
+    },
+    {
+      "grant": "U01DE034198",
+      "activity_code": "U01",
+      "component": "Tools and Methods",
+      "title": "Establishing laboratory methods for quantitative recovery of diverse DNA and RNA viral sequences from human biosamples",
+      "institution": "UC Davis",
+      "region": "West",
+      "pis": "Joanne Emerson",
+      "period": "2024\u20132028"
+    },
+    {
+      "grant": "U01DE035628",
+      "activity_code": "U01",
+      "component": "Tools and Methods",
+      "title": "Leveraging primary cell and organoid culture to identify and map the human virome",
+      "institution": "Yale",
+      "region": "Northeast",
+      "pis": "Ellen Flescher Foxman",
+      "period": "2026\u20132030"
+    },
+    {
+      "grant": "U01DE035620",
+      "activity_code": "U01",
+      "component": "Tools and Methods",
+      "title": "Function-based annotation and classification of uncharacterized eukaryotic viruses in the human virome",
+      "institution": "Yale",
+      "region": "Northeast",
+      "pis": "Wendy Victoria Gilbert; Carson Cornell Thoreen",
+      "period": "2026\u20132030"
+    },
+    {
+      "grant": "U54AG089325",
+      "activity_code": "U54",
+      "component": "Virome Characterization Center",
+      "title": "Virome Investigation in Diverse Human Populations",
+      "institution": "Broad Institute",
+      "region": "Northeast",
+      "pis": "Pardis Christine Sabeti; Dong Wang",
+      "period": "2025\u20132030"
+    },
+    {
+      "grant": "U54AG089334",
+      "activity_code": "U54",
+      "component": "Virome Characterization Center",
+      "title": "VAST Center: Viromes Across Space(s) and Time",
+      "institution": "Stanford",
+      "region": "West",
+      "pis": "Ami Siddharth Bhatt; Christopher Edward Mason; Michael P. Snyder",
+      "period": "2025\u20132030"
+    },
+    {
+      "grant": "U54AG089335",
+      "activity_code": "U54",
+      "component": "Virome Characterization Center",
+      "title": "Human Virome Characterization Center for the Oral-Gut-Brain Axis",
+      "institution": "UCLA",
+      "region": "West",
+      "pis": "James R Cerhan; Yvonne L Kapila; Janice S LEE; Clara M Lajonchere; Joseph Frank Petrosino",
+      "period": "2025\u20132030"
+    },
+    {
+      "grant": "U54AG089323",
+      "activity_code": "U54",
+      "component": "Virome Characterization Center",
+      "title": "The Oro-Respiratory-Gut Virome Axis Over Space and Time",
+      "institution": "UPenn",
+      "region": "Northeast",
+      "pis": "Frederic D Bushman; Ronald G Collman",
+      "period": "2025\u20132030"
+    },
+    {
+      "grant": "U54AG089326",
+      "activity_code": "U54",
+      "component": "Virome Characterization Center",
+      "title": "Vanderbilt-coordinated human Virome Collaborative Center (V2C2)",
+      "institution": "Vanderbilt",
+      "region": "South",
+      "pis": "Suman Ranjan Das; Susan P Fisher-hoch; Kari E. North; Ravi Shah",
+      "period": "2025\u20132030"
+    }
+  ],
+  "map_points": [
+    {
+      "institution": "U Maryland IGS",
+      "region": "Northeast",
+      "lat": 39.29,
+      "lon": -76.62,
+      "grants": [
+        "U24HL175772"
+      ]
+    },
+    {
+      "institution": "MSKCC",
+      "region": "Northeast",
+      "lat": 40.76,
+      "lon": -73.96,
+      "grants": [
+        "U01AT012984"
+      ]
+    },
+    {
+      "institution": "UCSF",
+      "region": "West",
+      "lat": 37.76,
+      "lon": -122.46,
+      "grants": [
+        "U01AT012993"
+      ]
+    },
+    {
+      "institution": "U Utah",
+      "region": "West",
+      "lat": 40.77,
+      "lon": -111.84,
+      "grants": [
+        "U01AT012990"
+      ]
+    },
+    {
+      "institution": "WashU",
+      "region": "Midwest",
+      "lat": 38.65,
+      "lon": -90.31,
+      "grants": [
+        "U01AT012998",
+        "U01AT012970"
+      ]
+    },
+    {
+      "institution": "PNNL",
+      "region": "West",
+      "lat": 46.35,
+      "lon": -119.28,
+      "grants": [
+        "U01DE034176"
+      ]
+    },
+    {
+      "institution": "Broad Institute",
+      "region": "Northeast",
+      "lat": 42.36,
+      "lon": -71.09,
+      "grants": [
+        "U01DE035622",
+        "U54AG089325"
+      ]
+    },
+    {
+      "institution": "Caltech",
+      "region": "West",
+      "lat": 34.14,
+      "lon": -118.13,
+      "grants": [
+        "U01DE034199"
+      ]
+    },
+    {
+      "institution": "Stanford",
+      "region": "West",
+      "lat": 37.43,
+      "lon": -122.17,
+      "grants": [
+        "U01DE035635",
+        "U54AG089334"
+      ]
+    },
+    {
+      "institution": "SUNY Buffalo",
+      "region": "Northeast",
+      "lat": 43.0,
+      "lon": -78.79,
+      "grants": [
+        "U01DE035632"
+      ]
+    },
+    {
+      "institution": "UNC Chapel Hill",
+      "region": "South",
+      "lat": 35.9,
+      "lon": -79.05,
+      "grants": [
+        "U01DE034179"
+      ]
+    },
+    {
+      "institution": "LBNL",
+      "region": "West",
+      "lat": 37.88,
+      "lon": -122.25,
+      "grants": [
+        "U01DE034196"
+      ]
+    },
+    {
+      "institution": "UC Davis",
+      "region": "West",
+      "lat": 38.54,
+      "lon": -121.75,
+      "grants": [
+        "U01DE034198"
+      ]
+    },
+    {
+      "institution": "Yale",
+      "region": "Northeast",
+      "lat": 41.32,
+      "lon": -72.92,
+      "grants": [
+        "U01DE035628",
+        "U01DE035620"
+      ]
+    },
+    {
+      "institution": "UCLA",
+      "region": "West",
+      "lat": 34.07,
+      "lon": -118.44,
+      "grants": [
+        "U54AG089335"
+      ]
+    },
+    {
+      "institution": "UPenn",
+      "region": "Northeast",
+      "lat": 39.95,
+      "lon": -75.19,
+      "grants": [
+        "U54AG089323"
+      ]
+    },
+    {
+      "institution": "Vanderbilt",
+      "region": "South",
+      "lat": 36.14,
+      "lon": -86.8,
+      "grants": [
+        "U54AG089326"
+      ]
+    }
+  ],
+  "data_as_of": "2026-07-10"
+}

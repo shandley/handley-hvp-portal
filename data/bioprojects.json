@@ -1,0 +1,198 @@
+{
+  "umbrella": "PRJNA1336838",
+  "checked": "2026-07-11",
+  "counts_by_status": {
+    "not-released": 19,
+    "open-sra": 2
+  },
+  "public": [
+    {
+      "accession": "PRJNA1348896",
+      "level": "dataset",
+      "grant": "AG089323",
+      "title": "2025-10-24_Duan_Optimizing-Methods-for-Virome (synthetic community VirMock1)",
+      "release_status": "open-sra",
+      "n_sra_runs": 323
+    },
+    {
+      "accession": "PRJEB88320",
+      "level": "dataset",
+      "grant": "AG089334",
+      "title": "Long-read Benchmark",
+      "release_status": "open-sra",
+      "n_sra_runs": 24
+    }
+  ],
+  "note": "release_status is verified live against NCBI (SRA Consent = public vs dbGaP controlled vs no data yet). The portal features and reanalyzes only datasets confirmed public.",
+  "bioprojects": [
+    {
+      "accession": "PRJNA1336838",
+      "level": "top umbrella",
+      "grant": "U24HL175772",
+      "title": "NIH Human Virome Program (HVP)",
+      "release_status": "not-released",
+      "n_sra_runs": 0
+    },
+    {
+      "accession": "PRJNA1336841",
+      "level": "sub-umbrella",
+      "grant": "AG089323",
+      "title": "The Oro-Respiratory-Gut Virome Axis Over Space and Time",
+      "release_status": "not-released",
+      "n_sra_runs": 0
+    },
+    {
+      "accession": "PRJNA1336842",
+      "level": "sub-umbrella",
+      "grant": "AG089325",
+      "title": "Virome Investigation in Diverse Human Populations",
+      "release_status": "not-released",
+      "n_sra_runs": 0
+    },
+    {
+      "accession": "PRJNA1336843",
+      "level": "sub-umbrella",
+      "grant": "AG089326",
+      "title": "Vanderbilt-coordinated human Virome Collaborative Center (V2C2)",
+      "release_status": "not-released",
+      "n_sra_runs": 0
+    },
+    {
+      "accession": "PRJNA1336844",
+      "level": "sub-umbrella",
+      "grant": "AG089334",
+      "title": "VAST Center: Viromes Across Space(s) and Time",
+      "release_status": "not-released",
+      "n_sra_runs": 0
+    },
+    {
+      "accession": "PRJNA1336845",
+      "level": "sub-umbrella",
+      "grant": "AG089335",
+      "title": "Human Virome Characterization Center for the Oral-Gut-Brain Axis",
+      "release_status": "not-released",
+      "n_sra_runs": 0
+    },
+    {
+      "accession": "PRJNA1336849",
+      "level": "sub-umbrella",
+      "grant": "AT012970",
+      "title": "Dynamic changes in virome-host interactions during pregnancy and postpartum",
+      "release_status": "not-released",
+      "n_sra_runs": 0
+    },
+    {
+      "accession": "PRJNA1336850",
+      "level": "sub-umbrella",
+      "grant": "AT012984",
+      "title": "The Human DNA virome: from petabase scale to single-cell resolution",
+      "release_status": "not-released",
+      "n_sra_runs": 0
+    },
+    {
+      "accession": "PRJNA1336851",
+      "level": "sub-umbrella",
+      "grant": "AT012990",
+      "title": "Antibody targeting of the virome",
+      "release_status": "not-released",
+      "n_sra_runs": 0
+    },
+    {
+      "accession": "PRJNA1336852",
+      "level": "sub-umbrella",
+      "grant": "AT012993",
+      "title": "Whole Body Deep Tissue Characterization of the Human Virome",
+      "release_status": "not-released",
+      "n_sra_runs": 0
+    },
+    {
+      "accession": "PRJNA1336853",
+      "level": "sub-umbrella",
+      "grant": "AT012998",
+      "title": "Functional characterization of viral-bacterial-human interactions across lifespans",
+      "release_status": "not-released",
+      "n_sra_runs": 0
+    },
+    {
+      "accession": "PRJNA1336854",
+      "level": "sub-umbrella",
+      "grant": "DE034179",
+      "title": "Concentration and single virion analysis of the virome",
+      "release_status": "not-released",
+      "n_sra_runs": 0
+    },
+    {
+      "accession": "PRJNA1336855",
+      "level": "sub-umbrella",
+      "grant": "DE034198",
+      "title": "Establishing laboratory methods for quantitative recovery of viral sequences",
+      "release_status": "not-released",
+      "n_sra_runs": 0
+    },
+    {
+      "accession": "PRJNA1336856",
+      "level": "sub-umbrella",
+      "grant": "DE034199",
+      "title": "Viral MEM: Viral Enrichment and Precise Stochastic Quantification",
+      "release_status": "not-released",
+      "n_sra_runs": 0
+    },
+    {
+      "accession": "PRJNA1473985",
+      "level": "sub-umbrella",
+      "grant": "DE035622",
+      "title": "Computational methods for benchmarking and best practices",
+      "release_status": "not-released",
+      "n_sra_runs": 0
+    },
+    {
+      "accession": "PRJNA1473989",
+      "level": "sub-umbrella",
+      "grant": "DE035620",
+      "title": "Function-based annotation of uncharacterized eukaryotic viruses",
+      "release_status": "not-released",
+      "n_sra_runs": 0
+    },
+    {
+      "accession": "PRJNA1473990",
+      "level": "sub-umbrella",
+      "grant": "DE035635",
+      "title": "Computational/experimental/ecological approaches to integrated phages",
+      "release_status": "not-released",
+      "n_sra_runs": 0
+    },
+    {
+      "accession": "PRJNA1473991",
+      "level": "sub-umbrella",
+      "grant": "DE035632",
+      "title": "Hiding in plain sight: integrating AI with targeted bench methods",
+      "release_status": "not-released",
+      "n_sra_runs": 0
+    },
+    {
+      "accession": "PRJNA1473992",
+      "level": "sub-umbrella",
+      "grant": "DE035628",
+      "title": "Leveraging primary cell and organoid culture to identify the virome",
+      "release_status": "not-released",
+      "n_sra_runs": 0
+    },
+    {
+      "accession": "PRJNA1348896",
+      "level": "dataset",
+      "grant": "AG089323",
+      "title": "2025-10-24_Duan_Optimizing-Methods-for-Virome (synthetic community VirMock1)",
+      "release_status": "open-sra",
+      "n_sra_runs": 323
+    },
+    {
+      "accession": "PRJEB88320",
+      "level": "dataset",
+      "grant": "AG089334",
+      "title": "Long-read Benchmark",
+      "release_status": "open-sra",
+      "n_sra_runs": 24
+    }
+  ],
+  "data_as_of": "2026-07-10"
+}

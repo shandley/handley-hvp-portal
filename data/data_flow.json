@@ -1,0 +1,88 @@
+{
+  "nodes": [
+    {
+      "id": "dgg",
+      "label": "Data Generating Groups",
+      "owner": "Centers"
+    },
+    {
+      "id": "vbr",
+      "label": "Virtual Biorepository",
+      "owner": "Baylor"
+    },
+    {
+      "id": "ncbi",
+      "label": "NCBI (SRA / dbGaP)",
+      "owner": "NCBI"
+    },
+    {
+      "id": "repo",
+      "label": "HVPCC Data Repository",
+      "owner": "UMIGS (Maryland)"
+    },
+    {
+      "id": "portal",
+      "label": "HVP Data Portal",
+      "owner": "UMIGS"
+    },
+    {
+      "id": "proc",
+      "label": "Assembly \u00b7 Profiling",
+      "owner": "Harvard"
+    },
+    {
+      "id": "img",
+      "label": "IMG + Visualization",
+      "owner": "JGI"
+    },
+    {
+      "id": "ictv",
+      "label": "ICTV taxonomy",
+      "owner": "ICTV"
+    }
+  ],
+  "edges": [
+    [
+      "dgg",
+      "vbr",
+      "metadata"
+    ],
+    [
+      "dgg",
+      "ncbi",
+      "data files"
+    ],
+    [
+      "vbr",
+      "repo",
+      "validated metadata"
+    ],
+    [
+      "ncbi",
+      "repo",
+      "data files"
+    ],
+    [
+      "repo",
+      "portal",
+      ""
+    ],
+    [
+      "repo",
+      "proc",
+      ""
+    ],
+    [
+      "proc",
+      "img",
+      ""
+    ],
+    [
+      "ictv",
+      "proc",
+      "taxonomy"
+    ]
+  ],
+  "note": "From the HVP data-management diagram. Portal not yet deployed as of data_as_of.",
+  "data_as_of": "2026-07-10"
+}

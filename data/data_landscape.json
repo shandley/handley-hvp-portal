@@ -1,0 +1,62 @@
+{
+  "headline": {
+    "cohorts": 59,
+    "planned_samples": 105298,
+    "hvp_participants_est": 37565,
+    "parent_biobank_enrollment": 367875
+  },
+  "caveats": [
+    "Sample counts are planned/holdings, not deposited data.",
+    "Parent-biobank enrollment (the Broad Nurses' Health / HPFS / GUTS cohorts) is reported separately and is NOT summed into HVP participants."
+  ],
+  "cohorts_by_body_site": {
+    "blood": 37,
+    "gut": 32,
+    "oral": 23,
+    "respiratory": 19,
+    "urogenital/repro": 16,
+    "skin": 9,
+    "other tissue": 6,
+    "neuro": 5
+  },
+  "plans_by_modality": {
+    "metagenome": 13,
+    "metatranscriptome": 4,
+    "spatial": 2,
+    "VLP metagenome": 2,
+    "DNA-Seq": 2,
+    "RNA-Seq": 2,
+    "metagenome (ss/dsDNA+RNA)": 2,
+    "amplicon": 1,
+    "host+viral RNA": 1,
+    "viral capture": 1,
+    "R+DNA-Seq": 1,
+    "metabolomics": 1,
+    "proteomics": 1,
+    "imaging": 1,
+    "multimodal": 1,
+    "VLP metatranscriptome": 1
+  },
+  "plans_by_platform": {
+    "NovaSeq": 9,
+    "Illumina": 6,
+    "NovaSeq X": 5,
+    "NextSeq": 4,
+    "AVITI": 4,
+    "PacBio": 2,
+    "ONT": 1,
+    "10X": 1,
+    "PacBio Revio": 1,
+    "Slide-Seq": 1,
+    "Ultima Genomics 300bp": 1,
+    "Akoya Phenocycler": 1,
+    "multiple": 1
+  },
+  "cohorts_by_initiative": {
+    "Characterization": 50,
+    "Functional": 7,
+    "Tools/Methods": 2
+  },
+  "note": "Aggregate synthesis by the Handley Lab. Per-cohort specifics are held private until the underlying data is public.",
+  "data_as_of": "2026-07-10"
+}

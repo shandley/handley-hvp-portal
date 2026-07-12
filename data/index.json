@@ -1,0 +1,12 @@
+{
+  "generated_from": "HVP corpus (private)",
+  "data_as_of": "2026-07-10",
+  "bundles": [
+    "program",
+    "consortium",
+    "data_landscape",
+    "bioprojects",
+    "data_flow"
+  ],
+  "disclaimer": "Synthesized by the Handley Lab. Independent perspective, not an official HVP product."
+}
