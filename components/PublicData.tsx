@@ -1,12 +1,13 @@
 "use client";
 
 import { useState } from "react";
-import { PUBLIC_DATA, CATEGORY_LABEL, type PublicResource } from "@/lib/data";
+import { PUBLIC_DATA, CATEGORY_LABEL, DATA_TYPE_LABEL, type PublicResource } from "@/lib/data";
 
 const CATEGORY_ORDER = ["unified-resource", "reference-taxonomy", "cohort-dataset"];
 
 function ResourceCard({ r }: { r: PublicResource }) {
   const primary = r.identifier_url || r.url;
+  const ready = r.reanalysis_ready === "yes";
   return (
     <article className="res-card">
       <div className="res-top">
@@ -19,7 +20,11 @@ function ResourceCard({ r }: { r: PublicResource }) {
         {r.site_tags.map((t) => (
           <span className="res-tag" key={t}>{t}</span>
         ))}
-        <span className="res-mod">{r.access_modality.replace("-", " ")}</span>
+        {r.data_type ? (
+          <span className={`res-dtype${ready ? " ready" : ""}`}>
+            {DATA_TYPE_LABEL[r.data_type] ?? r.data_type}
+          </span>
+        ) : null}
       </div>
       <p className="res-summary">{r.summary}</p>
       <div className="res-foot">
@@ -32,7 +37,14 @@ function ResourceCard({ r }: { r: PublicResource }) {
             visit resource
           </a>
         )}
-        <span className="res-access">{r.access_note}</span>
+        {ready && r.download_method !== "portal" ? (
+          <span className="res-get">
+            {r.download_method}
+            {r.license && r.license !== "see source" ? ` · ${r.license}` : ""}
+          </span>
+        ) : (
+          <span className="res-access">{r.access_note}</span>
+        )}
       </div>
     </article>
   );
@@ -40,20 +52,36 @@ function ResourceCard({ r }: { r: PublicResource }) {
 
 export function PublicData() {
   const [site, setSite] = useState<string>("all");
+  const [readyOnly, setReadyOnly] = useState<boolean>(false);
   const all = PUBLIC_DATA.resources;
-  const shown = site === "all" ? all : all.filter((r) => r.site_tags.includes(site));
+  const readyN = PUBLIC_DATA.counts_by_ready?.yes ?? 0;
+
+  let shown = readyOnly ? all.filter((r) => r.reanalysis_ready === "yes") : all;
+  if (site !== "all") shown = shown.filter((r) => r.site_tags.includes(site));
 
   return (
     <div className="res">
+      <div className="res-controls">
+        <button
+          className={`res-toggle${readyOnly ? " on" : ""}`}
+          onClick={() => setReadyOnly((v) => !v)}
+          aria-pressed={readyOnly}
+        >
+          <span className="res-toggle-dot" /> Reanalysis-ready only
+          <span className="res-chip-n">{readyN}</span>
+        </button>
+      </div>
+
       <div className="res-filter" role="group" aria-label="Filter resources by body site">
         <button
           className={`res-chip${site === "all" ? " active" : ""}`}
           onClick={() => setSite("all")}
         >
-          All <span className="res-chip-n">{all.length}</span>
+          All <span className="res-chip-n">{readyOnly ? readyN : all.length}</span>
         </button>
         {PUBLIC_DATA.site_filters.map((s) => {
-          const n = all.filter((r) => r.site_tags.includes(s)).length;
+          const pool = readyOnly ? all.filter((r) => r.reanalysis_ready === "yes") : all;
+          const n = pool.filter((r) => r.site_tags.includes(s)).length;
           if (!n) return null;
           return (
             <button

@@ -178,6 +178,11 @@ export default function Page() {
               </div>
             )}
             <p className="gate-note muted">{bp.note}</p>
+            <p className="gate-note muted">
+              While the program&apos;s own data lands, {PUBLIC_DATA.counts_by_ready?.yes ?? 0}{" "}
+              public human-virome datasets are available to download and reanalyze now.{" "}
+              <a href="#resources">See public data resources below.</a>
+            </p>
           </div>
         </div>
       </section>
@@ -198,9 +203,11 @@ export default function Page() {
             {PUBLIC_DATA.counts_by_category["cohort-dataset"]} individual cohort datasets.
           </p>
           <p className="prose muted" style={{ marginBottom: "1.6rem", fontSize: "0.86rem" }}>
-            This is a curated selection, not a complete index. Every identifier was checked against
-            CrossRef, DataCite, or NCBI as of <span className="mono">{PUBLIC_DATA.data_as_of}</span>;
-            each entry links to the source. Filter by body site below.
+            Of these, {PUBLIC_DATA.counts_by_ready?.yes ?? 0} have data you can download and reanalyze
+            now (raw reads or assembled catalogs); the rest are browsable portals or reference sets.
+            Use the toggle to see just the reanalysis-ready ones. This is a curated selection, not a
+            complete index. Every identifier was checked against CrossRef, DataCite, or NCBI as of{" "}
+            <span className="mono">{PUBLIC_DATA.data_as_of}</span>; each entry links to the source.
           </p>
           <PublicData />
         </div>
