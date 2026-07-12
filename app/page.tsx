@@ -3,8 +3,8 @@ import CapsidBackground from "@/components/CapsidBackground";
 import { PROGRAM, CONSORTIUM, LANDSCAPE, fmt } from "@/lib/data";
 
 export const metadata: Metadata = {
-  title: "The human virome, up close · Handley Lab",
-  description: "An immersive view of the NIH Human Virome Program.",
+  title: "The human virome · Handley Lab",
+  description: "An independent Handley Lab synthesis of the NIH Human Virome Program.",
 };
 
 export default function Explore() {
@@ -24,12 +24,12 @@ export default function Explore() {
         <div className="explore-hero">
           <div className="kicker light">An independent synthesis &middot; the human virome</div>
           <h1 className="display">
-            Ten trillion viruses<br />live in and on you.
+            Most human viruses<br />are still unknown.
           </h1>
           <p className="explore-lead">
-            Most are unknown. The NIH Human Virome Program is the first coordinated effort to
-            catalog them across the human body and the human lifespan. This is the Handley
-            Lab&apos;s reading of that effort.
+            The NIH Human Virome Program is the first coordinated effort to catalog them across
+            the human body and the human lifespan. This is the Handley Lab&apos;s independent
+            reading of that effort, drawn from public program records.
           </p>
 
           <div className="explore-stats">
@@ -39,7 +39,7 @@ export default function Explore() {
             <div><b className="num">{fmt(h.planned_samples)}</b><span>samples mapped</span></div>
           </div>
 
-          <a className="explore-cta" href="/landscape">Enter the data landscape &rarr;</a>
+          <a className="explore-cta" href="/landscape">View the data landscape &rarr;</a>
         </div>
 
         <p className="explore-foot">

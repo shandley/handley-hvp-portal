@@ -17,7 +17,7 @@ export default function Page() {
         <div className="wrap">
           <div className="prose">
             <div className="kicker">Handley Lab · a synthesis</div>
-            <h1>The Human Virome Program, in one view.</h1>
+            <h1>The Human Virome Program, synthesized.</h1>
             <p className="standfirst">
               An independent reading of the NIH Human Virome Program: the consortium behind it,
               the data it is generating across the human body, and the infrastructure that moves
@@ -41,11 +41,11 @@ export default function Page() {
           </div>
           <div className="cols two">
             <div className="prose">
-              <p>{PROGRAM.mission} The first phase runs {PROGRAM.phase.toLowerCase()},
-                a Common Fund investment of {PROGRAM.funding_headline}.</p>
+              <p>{PROGRAM.mission} Its first phase runs {PROGRAM.phase}, an NIH Common Fund
+                investment of {PROGRAM.funding_headline}.</p>
               <p className="muted">
                 It is organized as a consortium: characterization centers that catalog the
-                virome across cohorts, functional studies of host–virome interactions, tool and
+                virome across cohorts, functional studies of host-virome interactions, tool and
                 method development, and a coordinating center for data.
               </p>
             </div>
@@ -146,14 +146,14 @@ export default function Page() {
 
           <div className="gate">
             <div className="gate-head">
-              <span className="pill">release gate</span>
+              <span className="pill">release status</span>
               <span className="muted">
                 {bp.bioprojects.length} BioProjects under <span className="mono">{bp.umbrella}</span>,
-                status verified live against NCBI{bp.checked ? ` on ${bp.checked}` : ""}.
+                status verified against NCBI{bp.checked ? ` on ${bp.checked}` : ""}.
               </span>
             </div>
             <div className="figs gate-figs">
-              <div className="fig"><div className="v">{openN}</div><div className="k">public now (open SRA), fair to reanalyze</div></div>
+              <div className="fig"><div className="v">{openN}</div><div className="k">public (open SRA)</div></div>
               {controlledN > 0 && (
                 <div className="fig"><div className="v">{controlledN}</div><div className="k">controlled (dbGaP), under a data use agreement</div></div>
               )}
@@ -162,7 +162,7 @@ export default function Page() {
 
             {bp.public.length > 0 && (
               <div className="public-list">
-                <div className="chart-title">Public datasets, available to reanalyze</div>
+                <div className="chart-title">Public datasets available for reanalysis</div>
                 <ul>
                   {bp.public.map((d) => (
                     <li key={d.accession}>

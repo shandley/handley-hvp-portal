@@ -91,7 +91,7 @@ section:first-of-type { border-top: none; }
 .section-head { display: flex; align-items: baseline; gap: 0.9rem; margin-bottom: 1.6rem; }
 .section-head h2 { font-family: var(--serif); }
 
-/* hero — the tonal bridge from the landing: a dark navy band carrying the landing's
+/* hero: the tonal bridge from the landing, a dark navy band carrying the landing's
    palette (cream text + Okabe glows), easing down into the cream data body. */
 .hero {
   padding: clamp(3rem, 8vw, 5.8rem) 0 clamp(3.6rem, 7vw, 5.2rem);
@@ -186,7 +186,7 @@ table.awards .inst { font-family: var(--sans); }
 }
 
 /* ============================================================
-   /explore — maximal register (dark, 3D capsid background)
+   /explore: maximal register (dark, 3D capsid background)
    ============================================================ */
 /* static poster: soft accent glows echoing the capsid lighting. Always visible, so
    the hero is composed instantly even before the WebGL canvas loads (or if it can't). */
