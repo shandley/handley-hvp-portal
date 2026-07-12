@@ -17,6 +17,7 @@ export default function SiteLayout({ children }: { children: React.ReactNode }) 
             <a href="#consortium">Consortium</a>
             <a href="#data">Data landscape</a>
             <a href="#infrastructure">Infrastructure</a>
+            <a href="#resources">Public data</a>
           </nav>
           <span className="tag">independent synthesis</span>
         </div>

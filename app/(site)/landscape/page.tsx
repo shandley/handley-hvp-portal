@@ -1,7 +1,8 @@
-import { PROGRAM, CONSORTIUM, LANDSCAPE, BIOPROJECTS, OKABE, fmt } from "@/lib/data";
+import { PROGRAM, CONSORTIUM, LANDSCAPE, BIOPROJECTS, PUBLIC_DATA, OKABE, fmt } from "@/lib/data";
 import { BarChart } from "@/components/BarChart";
 import { ConsortiumMap } from "@/components/ConsortiumMap";
 import { DataFlow } from "@/components/DataFlow";
+import { PublicData } from "@/components/PublicData";
 
 export default function Page() {
   const h = LANDSCAPE.headline;
@@ -178,6 +179,29 @@ export default function Page() {
             )}
             <p className="gate-note muted">{bp.note}</p>
           </div>
+        </div>
+      </section>
+
+      {/* Public data resources */}
+      <section id="resources" className="section-pad">
+        <div className="wrap">
+          <div className="section-head">
+            <div className="kicker">05</div>
+            <h2>Public data resources</h2>
+          </div>
+          <p className="prose muted" style={{ marginBottom: "0.4rem" }}>
+            Most of the program&apos;s own sequence data is not yet released (see the release status
+            above). In the meantime, these are the public human-virome datasets and data resources
+            the Handley Lab finds most useful as reference points and starting material:{" "}
+            {PUBLIC_DATA.counts_by_category["unified-resource"]} unified and aggregated resources,{" "}
+            {PUBLIC_DATA.counts_by_category["reference-taxonomy"]} reference and taxonomy sets, and{" "}
+            {PUBLIC_DATA.counts_by_category["cohort-dataset"]} individual cohort datasets.
+          </p>
+          <p className="prose muted" style={{ marginBottom: "1.6rem", fontSize: "0.86rem" }}>
+            This is a curated selection, not a complete index. Every identifier was checked against
+            CrossRef, DataCite, or NCBI; each entry links to the source. Filter by body site below.
+          </p>
+          <PublicData />
         </div>
       </section>
     </>

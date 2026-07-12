@@ -6,7 +6,8 @@
     "consortium",
     "data_landscape",
     "bioprojects",
-    "data_flow"
+    "data_flow",
+    "public_datasets"
   ],
   "disclaimer": "Synthesized by the Handley Lab. Independent perspective, not an official HVP product."
 }

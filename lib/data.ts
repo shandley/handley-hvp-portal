@@ -3,6 +3,7 @@ import consortium from "@/data/consortium.json";
 import landscape from "@/data/data_landscape.json";
 import bioprojects from "@/data/bioprojects.json";
 import flow from "@/data/data_flow.json";
+import publicDatasets from "@/data/public_datasets.json";
 
 export type Program = {
   name: string; mission: string; goals: string[]; phase: string;
@@ -42,11 +43,31 @@ export type Flow = {
   note: string; data_as_of: string;
 };
 
+export type PublicResource = {
+  name: string; category: "unified-resource" | "reference-taxonomy" | "cohort-dataset";
+  tier: "core" | "useful" | "niche"; body_sites: string; site_tags: string[];
+  lifespan: string; organism_scope: string; identifier: string; identifier_url: string;
+  url: string; size_scope: string; access_modality: string; summary: string;
+  access_note: string; verified: string;
+};
+export type PublicData = {
+  count: number; counts_by_category: Record<string, number>;
+  counts_by_tier: Record<string, number>; site_filters: string[];
+  resources: PublicResource[]; note: string; data_as_of: string;
+};
+
 export const PROGRAM = program as Program;
 export const CONSORTIUM = consortium as Consortium;
 export const LANDSCAPE = landscape as Landscape;
 export const BIOPROJECTS = bioprojects as BioProjects;
 export const FLOW = flow as unknown as Flow;
+export const PUBLIC_DATA = publicDatasets as PublicData;
+
+export const CATEGORY_LABEL: Record<string, string> = {
+  "unified-resource": "Unified and aggregated resources",
+  "reference-taxonomy": "Reference and taxonomy",
+  "cohort-dataset": "Individual cohort datasets",
+};
 
 // Okabe-Ito, mapped to consortium components (colorblind-safe; the lab figure standard)
 export const OKABE = {

@@ -1,0 +1,716 @@
+{
+  "count": 35,
+  "counts_by_category": {
+    "unified-resource": 18,
+    "reference-taxonomy": 7,
+    "cohort-dataset": 10
+  },
+  "counts_by_tier": {
+    "core": 9,
+    "useful": 21,
+    "niche": 5
+  },
+  "site_filters": [
+    "Gut",
+    "Oral",
+    "Respiratory",
+    "Skin",
+    "Urogenital",
+    "Blood/plasma",
+    "Neuro/CSF",
+    "Multi-site",
+    "Reference/taxonomy",
+    "Cross-cutting",
+    "Other"
+  ],
+  "resources": [
+    {
+      "name": "Cenote Human Virome Database (CHVD)",
+      "category": "unified-resource",
+      "tier": "core",
+      "body_sites": "Multi-site: gut, oral, nasal/respiratory, skin, vaginal (with explicit multi-body-site vOTU table HV3_table7)",
+      "site_tags": [
+        "Multi-site",
+        "Gut",
+        "Oral",
+        "Respiratory",
+        "Skin",
+        "Urogenital"
+      ],
+      "lifespan": "Adults predominantly (aggregated public human metagenomes)",
+      "organism_scope": "Whole human virome from aggregated public human metagenomes; 45,033 dereplicated vOTUs, predominantly DNA phages plus eukaryotic DNA viruses (incl. anelloviruses) and some RNA viruses",
+      "identifier": "10.5281/zenodo.4498884",
+      "identifier_url": "https://doi.org/10.5281/zenodo.4498884",
+      "url": "https://zenodo.org/records/4498884",
+      "size_scope": "45,033 dereplicated virus OTUs (95% ANI, 85% AF). Bulk deposit of gzipped FASTA sets (full virus sequences, virus-core subsequences, lightly-dereplicated mash99 contigs, human anelloviruses absent from GenBank, phage-encoded CRISPR spacers) plus eight XLSX data tables (bioproject/body-location provenance, master vOTU table, GenBank and Gut Virome Database cognate maps, viromeQC alignments, phage CRISPR host network, multi-body-site vOTUs, case/control runs) and a VContact2 network file. License CC-BY-4.0, version 1.1.",
+      "access_modality": "download",
+      "summary": "The Cenote Human Virome Database (CHVD) is a catalog of 45,033 dereplicated viral operational taxonomic units (95% ANI, 85% AF) assembled from aggregated public human metagenomes (Tisza and Buck 2021), spanning gut, oral, nasal/respiratory, skin, and vaginal body sites. The sequences are predominantly DNA phages, alongside eukaryotic DNA viruses (including anelloviruses) and some RNA viruses, and the deposit records each vOTU's body-site and BioProject provenance, including an explicit multi-body-site vOTU table. The Zenodo record (v1.1, CC-BY-4.0) provides gzipped FASTA sets (full sequences, virus-core subsequences, lightly dereplicated contigs, anelloviruses absent from GenBank, and phage CRISPR spacers) plus eight XLSX data tables and a VContact2 network file.",
+      "access_note": "Bulk download from the Zenodo deposit (DOI 10.5281/zenodo.4498884); files are FASTA, XLSX, and a network file, with no browsable portal or query API.",
+      "verified": "yes"
+    },
+    {
+      "name": "GPD (Gut Phage Database)",
+      "category": "unified-resource",
+      "tier": "core",
+      "body_sites": "Gut (fecal)",
+      "site_tags": [
+        "Gut"
+      ],
+      "lifespan": "All ages (global cohorts)",
+      "organism_scope": "DNA bacteriophages; 142,809 non-redundant viral genomes/clusters (95% nucleotide identity) with bacterial host assignments",
+      "identifier": "10.1016/j.cell.2021.01.029",
+      "identifier_url": "https://doi.org/10.1016/j.cell.2021.01.029",
+      "url": "https://ftp.ebi.ac.uk/pub/databases/metagenomics/genome_sets/gut_phage_database/",
+      "size_scope": "142,809 non-redundant viral genomes/clusters (95% nucleotide identity) predicted from 28,060 human gut metagenomes; includes proteome (~928M), GFF annotations (~1.9G), per-genome metadata, CheckV quality, host range (CRISPR + prophage), and worldwide prevalence. GPD_sequences.fa.gz ~1.4G.",
+      "access_modality": "download",
+      "summary": "The Gut Phage Database (GPD) is a reference catalog of DNA bacteriophages predicted from 28,060 human gut metagenomes, published alongside the 2021 Cell paper \"Massive expansion of human gut bacteriophage diversity\" (Camarillo-Guerrero et al.). It contains 142,809 non-redundant viral genomes clustered at 95 percent nucleotide identity, with per-genome metadata, CheckV quality scores, GTDB bacterial host assignments (from CRISPR spacer and prophage evidence), and worldwide prevalence estimates. Accompanying files include the genome sequences (GPD_sequences.fa.gz, roughly 1.4 GB), a predicted proteome, and GFF annotations.",
+      "access_note": "Bulk download of flat files (FASTA, proteome, GFF, metadata) from the EBI MGnify FTP at ftp.ebi.ac.uk/pub/databases/metagenomics/genome_sets/gut_phage_database/; no dedicated ENA study accession or query API.",
+      "verified": "yes"
+    },
+    {
+      "name": "IMG/VR",
+      "category": "unified-resource",
+      "tier": "core",
+      "body_sites": "environmental and host-associated",
+      "site_tags": [
+        "Other"
+      ],
+      "lifespan": "N/A",
+      "organism_scope": "all viruses (uncultivated virus genomes)",
+      "identifier": "",
+      "identifier_url": "",
+      "url": "https://img.jgi.doe.gov/vr",
+      "size_scope": ">15M UViGs (v4; NAR 2023 51(D1):D733); v5 in preparation",
+      "access_modality": "mixed",
+      "summary": "IMG/VR is JGI's database of uncultivated virus genomes assembled from metagenomes across all environments, including host-associated samples. Version 4 holds more than 15 million viral genomes and genome fragments with taxonomy, predicted host, and habitat annotations. The HVP JGI processing pipeline connects to IMG/VR, so it is a natural reference point for placing HVP viral contigs.",
+      "access_note": "Browse and download from the IMG/VR portal (img.jgi.doe.gov/vr); bulk data via JGI releases.",
+      "verified": "retrieved"
+    },
+    {
+      "name": "Metagenomic Gut Virus catalog (MGV) and successor UHGV",
+      "category": "unified-resource",
+      "tier": "core",
+      "body_sites": "Gut (fecal / stool metagenomes)",
+      "site_tags": [
+        "Gut"
+      ],
+      "lifespan": "All ages (aggregated public stool metagenomes; successor UHGV additionally integrates infant/early-life catalogs such as COPSAC)",
+      "organism_scope": "Uncultivated DNA viruses (predominantly dsDNA Caudovirales bacteriophages infecting Bacteroidia and Clostridia); MGV = 189,680 genomes / 54,118 candidate species (vOTUs) with CRISPR-spacer host predictions. Successor UHGV = 873,994 genomes / 168,536 vOTUs.",
+      "identifier": "10.1038/s41564-021-00928-6",
+      "identifier_url": "https://doi.org/10.1038/s41564-021-00928-6",
+      "url": "https://portal.nersc.gov/MGV/",
+      "size_scope": "MGV: 189,680 viral genomes, 54,118 candidate species (vOTUs), 459,375 viral protein clusters, assembled from 11,810 public human stool metagenomes; ~92% of species novel vs prior databases. Successor UHGV consolidates 12 catalogs (incl. MGV, GPD, GVD, IMG/VR, mMGE, CHVD, COPSAC): 873,994 genomes, 168,536 species-level vOTUs, ~37.4M proteins.",
+      "access_modality": "mixed",
+      "summary": "The Metagenomic Gut Virus catalog (MGV) is a compendium of 189,680 DNA virus genomes assembled from 11,810 public human stool metagenomes, clustered into 54,118 candidate species (vOTUs) and 459,375 protein clusters, predominantly uncultivated dsDNA Caudovirales bacteriophages infecting gut Bacteroidia and Clostridia, with host assignments from CRISPR-spacer matches. Its successor, the Unified Human Gut Virome (UHGV, Camargo et al. 2025), reprocesses MGV alongside 11 other catalogs (including GPD, GVD, IMG/VR, and the infant-focused COPSAC) through one pipeline, yielding 873,994 genomes and 168,536 species-level vOTUs. For HVP, both serve as read-mapping references for gut cohorts; the MGV paper reported roughly 92 percent of its species as novel relative to earlier databases.",
+      "access_note": "Bulk download plus browsable portal: MGV genomes and clusters at the NERSC portal (portal.nersc.gov/MGV/) with code on GitHub; UHGV via the JGI portal (uhgv.jgi.doe.gov/downloads) and Zenodo (10.5281/zenodo.17402089). No single SRA/BioProject accession applies to the aggregated catalog.",
+      "verified": "yes"
+    },
+    {
+      "name": "NCBI Virus / RefSeq Viral",
+      "category": "unified-resource",
+      "tier": "core",
+      "body_sites": "All (reference genomes, not sample-specific); host:human (taxid:9605) filter isolates human-infecting viruses",
+      "site_tags": [
+        "Cross-cutting"
+      ],
+      "lifespan": "N/A (reference resource)",
+      "organism_scope": "All viruses, DNA and RNA; RefSeq viral reference genomes plus GenBank/INSDC neighbor sequences",
+      "identifier": "",
+      "identifier_url": "",
+      "url": "https://www.ncbi.nlm.nih.gov/labs/virus/vssi/",
+      "size_scope": "RefSeq viral curated reference set ~19,600 nucleotide records (esearch nuccore viruses[Organism] AND srcdb_refseq[PROP] = 19,643 on 2026-07-12; segmented genomes counted per segment), part of RefSeq release 236. NCBI Virus additionally exposes the full INSDC/GenBank viral sequence space (millions of records) as browsable/downloadable neighbors, with a human-host (taxid:9605) filter for human-infecting viruses. Continuously updated.",
+      "access_modality": "mixed",
+      "summary": "NCBI Virus is NCBI's portal for viral sequence data, bringing together the curated RefSeq viral reference set (about 19,600 nucleotide records as of July 2026, part of RefSeq release 236) with the broader GenBank/INSDC collection of viral neighbor sequences. It covers DNA and RNA viruses and offers a human-host filter (taxonomy id 9605) that restricts results to human-infecting viruses. The RefSeq reference genomes and the underlying sequence records are public and downloadable; the portal itself provides interactive browsing and filtering rather than a single deposited dataset.",
+      "access_note": "Browsable and filterable through the NCBI Virus portal, queryable via NCBI E-utilities/API, and downloadable in bulk via NCBI Datasets and the RefSeq FTP release (release 236); no single dataset accession applies.",
+      "verified": "retrieved"
+    },
+    {
+      "name": "Oral Virus Database (OVD)",
+      "category": "unified-resource",
+      "tier": "core",
+      "body_sites": "Oral (12 sites: saliva, dental plaque, tongue, buccal mucosa, sub/supragingival, throat)",
+      "site_tags": [
+        "Oral"
+      ],
+      "lifespan": "Mixed adult (aggregated; predominantly adult)",
+      "organism_scope": "DNA viruses / bacteriophages (Caudovirales-dominant: Siphoviridae, Myoviridae, Podoviridae; plus crAss-like, Quimbyviridae, jumbo phages, predicted Saccharibacteria phages) and some eukaryotic DNA viruses; 45.8% of vOTUs taxonomically assigned to viral families",
+      "identifier": "10.1016/j.isci.2022.104418",
+      "identifier_url": "https://doi.org/10.1016/j.isci.2022.104418",
+      "url": "https://github.com/RChGO/OVD",
+      "size_scope": "48,425 nonredundant vOTUs (viral genomes >=5 kbp) clustered from 121,054 viral sequences; ~70% novel. Aggregated from 2,792 publicly available oral metagenomes spanning 12 oral sites and 9 countries. Download sizes: nonredundant genomes 386 MB, full genomes 912 MB, genes 382 MB, proteins 254 MB, annotations 13 MB.",
+      "access_modality": "download",
+      "summary": "The Oral Virus Database (OVD) is a catalog of 48,425 nonredundant viral operational taxonomic units (viral genomes at least 5 kbp) clustered from 121,054 viral sequences recovered from 2,792 publicly available oral metagenomes spanning 12 oral sites and 9 countries. The genomes are predominantly DNA viruses and bacteriophages, with Caudovirales families (Siphoviridae, Myoviridae, Podoviridae) dominant alongside crAss-like phages, Quimbyviridae, jumbo phages, and predicted Saccharibacteria phages; 45.8% of vOTUs are assigned to viral families and roughly 70% are novel. Accompanying genome, gene, protein, and annotation files are distributed for download.",
+      "access_note": "Bulk download of genomes, genes, proteins, and annotation files from the GitHub repository (RChGO/OVD) and Baidu Cloud; there is no browsable portal or API, and the 2,792 source metagenomes are listed as individual NCBI BioSamples in the paper's Table S2.",
+      "verified": "yes"
+    },
+    {
+      "name": "RVMT (RNA Viruses in MetaTranscriptomes)",
+      "category": "unified-resource",
+      "tier": "core",
+      "body_sites": "Cross-cutting; source metatranscriptomes span host-associated (human gut, oral, other) and environmental samples",
+      "site_tags": [
+        "Multi-site",
+        "Gut",
+        "Oral"
+      ],
+      "lifespan": "Not stratified",
+      "organism_scope": "RNA viruses (Orthornavirae/Riboviria), RdRp-anchored; five phyla (Duplornaviricota, Kitrinoviricota, Lenaviricota, Negarnaviricota, Pisuviricota) plus unclassified, including novel RNA bacteriophage clades",
+      "identifier": "10.1016/j.cell.2022.08.023",
+      "identifier_url": "https://doi.org/10.1016/j.cell.2022.08.023",
+      "url": "https://riboviria.org/",
+      "size_scope": "Current release RiboV1.4 comprises 378,253 sequences (RdRp-anchored RNA virus contigs/units; the study reported an ~5-fold expansion of the RNA virome with ~330k RdRp-containing sequences) organized by taxonomy across five phyla plus unclassified, with phylogenetic trees and annotations.",
+      "access_modality": "mixed",
+      "summary": "RVMT (RNA Viruses in MetaTranscriptomes) is a catalog of RNA viruses assembled from metatranscriptomes, anchored on the RNA-dependent RNA polymerase (RdRp) and organized by taxonomy across five phyla of Orthornavirae plus unclassified sequences, including newly described clades of RNA bacteriophages. The current release, RiboV1.4, contains 378,253 RdRp-anchored sequences with phylogenetic trees and annotations, and accompanies Neri, Wolf, Roux, Camargo, Lee et al. (Cell 185(21):4023-4037.e18, 2022). The source metatranscriptomes span host-associated samples (including human gut and oral) and environmental samples, so RVMT is cross-cutting rather than human-specific, and it serves as a reference layer for RNA viruses rather than a human-virome collection on its own.",
+      "access_note": "Public bulk download: RiboV1.4 files at the NERSC portal (portal.nersc.gov/dna/microbial/prokpubs/Riboviria/RiboV1.4) and a Zenodo deposit (10.5281/zenodo.6091356); riboviria.org is a browsable project homepage that links to these.",
+      "verified": "yes"
+    },
+    {
+      "name": "Serratus / palmDB (petabase-scale SRA RNA virus mining)",
+      "category": "unified-resource",
+      "tier": "core",
+      "body_sites": "Cross-cutting; the ~5.7M reanalyzed SRA runs include extensive human clinical and body-site samples alongside environmental and animal sources",
+      "site_tags": [
+        "Cross-cutting"
+      ],
+      "lifespan": "Not stratified",
+      "organism_scope": "RNA viruses identified via the RdRp palmprint barcode; palmDB sOTU/vOTU catalog of RdRP-containing viral operational taxonomic units",
+      "identifier": "10.1038/s41586-021-04332-2",
+      "identifier_url": "https://doi.org/10.1038/s41586-021-04332-2",
+      "url": "https://serratus.io/",
+      "size_scope": "Reanalysis of ~5.7 million (reported up to >6M) public NCBI SRA sequencing runs spanning >10 petabases; produced the palmDB RdRP palmprint catalog of RNA-virus operational taxonomic units (recent palmDB version ~508,607 vOTUs). Software GPLv3; data CC0 / public domain per INSDC.",
+      "access_modality": "mixed",
+      "summary": "Serratus is an open reanalysis of public sequence data that realigned roughly 5.7 million NCBI Sequence Read Archive runs (more than 10 petabases) to identify RNA viruses through the RdRp palmprint, a short conserved barcode from the viral RNA-dependent RNA polymerase (Edgar et al., Nature, 2022). Its companion catalog, palmDB, records the resulting RdRp operational taxonomic units (a recent version lists about 508,607 vOTUs) and is maintained on GitHub. Because the reanalyzed runs include human clinical and body-site samples alongside environmental and animal sources, the palmprint standard lets researchers re-query specific human SRA cohorts and trace RNA-virus provenance rather than relying on a single deposited BioProject.",
+      "access_note": "Browsable portal and palmID query tool at serratus.io; palmDB catalog on GitHub (rcedgar/palmdb, archived, and ababaian/palmdb); bulk results on public S3; underlying reads are public in the SRA. No single accession applies because Serratus re-mines the entire SRA.",
+      "verified": "yes"
+    },
+    {
+      "name": "AVrC (aggregated gut virus catalog)",
+      "category": "unified-resource",
+      "tier": "useful",
+      "body_sites": "gut (including infant)",
+      "site_tags": [
+        "Gut"
+      ],
+      "lifespan": "includes early life",
+      "organism_scope": "gut DNA viruses and phages",
+      "identifier": "10.1371/journal.pcbi.1012268",
+      "identifier_url": "https://doi.org/10.1371/journal.pcbi.1012268",
+      "url": "https://doi.org/10.1371/journal.pcbi.1012268",
+      "size_scope": "1,018,941 sequences dereplicated to 449,859 vOTUs (9 gut catalogs plus 7,867 infant metagenomes)",
+      "access_modality": "download",
+      "summary": "AVrC aggregates nine published gut virus catalogs together with viral sequences mined from 7,867 infant metagenomes. It reports 449,859 viral operational taxonomic units, extending gut virome references toward early life. The collection is described in a 2025 PLOS Computational Biology paper and is available for download.",
+      "access_note": "Download via the publication (DOI 10.1371/journal.pcbi.1012268) and its data archive.",
+      "verified": "retrieved"
+    },
+    {
+      "name": "Early-Life Gut Virome catalog (ELGV; Zeng, Wang et al.)",
+      "category": "unified-resource",
+      "tier": "useful",
+      "body_sites": "Gut (infant/early-life stool; VLP-enriched and bulk metagenomes)",
+      "site_tags": [
+        "Gut"
+      ],
+      "lifespan": "Early life (first ~3 years of life)",
+      "organism_scope": "DNA and RNA viruses (bacteriophages and eukaryotic viruses); 160,478 non-redundant viral sequences clustered into 82,141 species-level vOTUs (11,413 genus-level, 1,238 family-level)",
+      "identifier": "10.6084/m9.figshare.21901557.v2",
+      "identifier_url": "https://doi.org/10.6084/m9.figshare.21901557.v2",
+      "url": "https://doi.org/10.6084/m9.figshare.21901557.v2",
+      "size_scope": "160,478 non-redundant DNA+RNA viral sequences; 82,141 species-level vOTUs (11,413 genus-level, 1,238 family-level); 68.3% absent from adult-built databases. Built from 8,130 fecal metagenomes (1,865 VLP-enriched + 6,265 bulk) across 35 studies, 15 countries, 5 continents, first ~3 years of life; 373 mother-infant dyads. Deposit ~1.15 GB, 2 gzipped FASTA files (all sequences + vOTU representatives), CC BY 4.0.",
+      "access_modality": "download",
+      "summary": "The Early-Life Gut Virome catalog (ELGV) is a reference collection of viral sequences assembled from 8,130 infant and early-life fecal metagenomes (1,865 VLP-enriched and 6,265 bulk) drawn from 35 public studies spanning 15 countries and the first three years of life. It contains 160,478 non-redundant DNA and RNA viral sequences (bacteriophages and eukaryotic viruses, including RNA viruses that most gut catalogs omit) clustered into 82,141 species-level vOTUs, 11,413 genus-level, and 1,238 family-level groups, of which 68.3% are absent from adult-built databases. The catalog accompanies Wang et al., Nature Communications 2024 (doi:10.1038/s41467-024-45793-z), and complements adult-skewed references such as UHGV, GVD, and GPD for early-life scope.",
+      "access_note": "Bulk download only: two gzipped FASTA files (all 160,478 sequences and the 82,141 vOTU representatives, ~1.15 GB total, CC BY 4.0) from figshare at doi:10.6084/m9.figshare.21901557.v2; no browsable portal or dedicated SRA accession for the catalog, and the source metagenomes are held under each contributing study's own accession.",
+      "verified": "yes"
+    },
+    {
+      "name": "Global RNA Virome / LucaProt catalog (Hou, Shi et al. 2024)",
+      "category": "unified-resource",
+      "tier": "useful",
+      "body_sites": "Cross-cutting; 10,487 metatranscriptomes spanning diverse global ecosystems including host-associated (e.g., human/animal gut, tissue) samples",
+      "site_tags": [
+        "Gut",
+        "Cross-cutting"
+      ],
+      "lifespan": "Not stratified",
+      "organism_scope": "RNA viruses; deep-learning (LucaProt transformer) detection of highly divergent RdRp. ~161,979 candidate RNA virus species across 180 supergroups; genomes up to 47,250 nt",
+      "identifier": "10.6084/m9.figshare.26298802",
+      "identifier_url": "https://doi.org/10.6084/m9.figshare.26298802",
+      "url": "https://github.com/alibaba/LucaProt",
+      "size_scope": "10,487 metatranscriptomes analyzed; ~161,979 candidate RNA virus species; 180 RNA virus supergroups; RdRp training set of 5,979 positive viral RdRPs vs 229,434 negatives (235,413 total samples); RNA virus genomes up to 47,250 nt",
+      "access_modality": "mixed",
+      "summary": "The Global RNA Virome / LucaProt catalog accompanies Hou, Shi et al. (2024, Cell), which applied a transformer model (LucaProt) to detect highly divergent RNA-dependent RNA polymerase sequences across 10,487 publicly available metatranscriptomes spanning global ecosystems, including host-associated samples such as human and animal gut and tissue. The resource reports roughly 161,979 candidate RNA virus species across 180 supergroups, with predicted genomes up to 47,250 nucleotides. For HVP it can serve two roles: a reference set of divergent RdRp sequences and a documented method for surfacing RNA viral dark matter in metatranscriptomic data.",
+      "access_note": "Bulk download: model, training data, and predicted RdRp/sequence files via figshare (DOI 10.6084/m9.figshare.26298802) and the GitHub repo (github.com/alibaba/LucaProt); the study mined existing metatranscriptomes, so no new SRA/ENA accession was minted.",
+      "verified": "yes"
+    },
+    {
+      "name": "Gut Virome Database (GVD; Gregory et al. 2020)",
+      "category": "unified-resource",
+      "tier": "useful",
+      "body_sites": "Gut (fecal)",
+      "site_tags": [
+        "Gut"
+      ],
+      "lifespan": "Full lifespan (infancy to senescence)",
+      "organism_scope": "DNA viruses / vOTUs (species-like at 95% ANI); 33,242 vOTUs",
+      "identifier": "10.25739/12sq-k039",
+      "identifier_url": "https://doi.org/10.25739/12sq-k039",
+      "url": "https://datacommons.cyverse.org/browse/iplant/home/shared/iVirus/Gregory_and_Zablocki_GVD_Jul2020",
+      "size_scope": "33,242 vOTUs (viral populations, species-like at 95% ANI) assembled from previously published human gut DNA viromes/metagenomes spanning infancy to senescence; distributed as per-virome files plus viral-population files via CyVerse Data Commons (iVirus).",
+      "access_modality": "mixed",
+      "summary": "The Gut Virome Database (GVD; Gregory et al., 2020) is a reference set of 33,242 viral operational taxonomic units (vOTUs), defined as species-like populations at 95 percent average nucleotide identity, assembled from previously published human gut DNA viromes and metagenomes that span infancy to senescence. It was built to describe age-dependent patterns of gut virome diversity, and it is distributed through the CyVerse Data Commons (iVirus) as per-virome files together with viral-population files. GVD is a widely used lifespan-spanning gut comparison set, though later catalogs such as MGV and GPD contain larger numbers of viral genomes.",
+      "access_note": "Public: files are downloadable from the CyVerse Data Commons (iVirus) folder at datacommons.cyverse.org/browse/iplant/home/shared/iVirus/Gregory_and_Zablocki_GVD_Jul2020 (browsable web folder with per-file download; dataset DOI 10.25739/12sq-k039).",
+      "verified": "yes"
+    },
+    {
+      "name": "HVP hybrid capture panel metadata",
+      "category": "unified-resource",
+      "tier": "useful",
+      "body_sites": "human-associated (panel design)",
+      "site_tags": [
+        "Other"
+      ],
+      "lifespan": "N/A",
+      "organism_scope": "curated human-infecting virus genomes",
+      "identifier": "",
+      "identifier_url": "",
+      "url": "https://github.com/Human-Virome/hybrid-capture-panel-hvp",
+      "size_scope": "88,529 genome records (v0.4.4, 2026-04)",
+      "access_modality": "download",
+      "summary": "The HVP hybrid capture panel metadata is a consortium-generated set of curated human-associated virus genomes assembled to design a hybrid-capture enrichment panel. Version 0.4.4 holds 88,529 genome records with full taxonomy, host, and taxonomy IDs. It is one of the program's own public resources.",
+      "access_note": "Browse at human-virome.github.io/hybrid-capture-panel-hvp; data and code in the GitHub repo.",
+      "verified": "yes"
+    },
+    {
+      "name": "iPHoP host database and framework",
+      "category": "unified-resource",
+      "tier": "useful",
+      "body_sites": "Host-linkage reference applicable to any body site",
+      "site_tags": [
+        "Other"
+      ],
+      "lifespan": "N/A",
+      "organism_scope": "Prokaryotic (archaeal and bacterial) host genomes; phage-host inference signal from CRISPR spacers, k-mer composition, and homology",
+      "identifier": "10.1371/journal.pbio.3002083",
+      "identifier_url": "https://doi.org/10.1371/journal.pbio.3002083",
+      "url": "https://journals.plos.org/plosbiology/article?id=10.1371/journal.pbio.3002083",
+      "size_scope": "Reference database iPHoP_db_Sept21: ~121,781 host genomes total (GTDB r202 representatives 47,894; IMG bacterial/archaeal genomes >=100 kb 22,188; GEM medium/high-quality MAGs 52,515), reduced to ~60,000 representative + ~43,022 clustered genomes for sequence-based prediction and 1,398,130 dereplicated CRISPR spacers from 40,036 genomes. Framework integrates multiple host-prediction methods via machine learning at genus-level FDR <10%; ~89% of high-quality human-associated viral genomes receive a host prediction (57% at high confidence).",
+      "access_modality": "download",
+      "summary": "iPHoP is a machine learning framework and reference database for predicting the prokaryotic (archaeal and bacterial) hosts of metagenome-derived viral genomes. Its reference release (iPHoP_db_Sept21) combines host genomes drawn from GTDB r202, IMG, and the GEM MAG catalog, about 60,000 representative genomes plus roughly 1.4 million dereplicated CRISPR spacers, and integrates several host-linkage signals (CRISPR spacer matches, k-mer composition, and sequence homology) to report genus-level assignments at an FDR below 10 percent. In the accompanying study it assigned a host to about 89 percent of high-quality human-associated viral genomes (57 percent at high confidence), which lets HVP viral catalogs be linked to candidate hosts across body sites.",
+      "access_note": "Bulk download: the tool installs via Bioconda (recipe \"iphop\") or the Docker image simroux/iphop with source at Bitbucket (srouxjgi/iphop), and the reference database (iPHoP_db_Sept21) is downloaded separately; the paper is open access at PLOS Biology (DOI 10.1371/journal.pbio.3002083).",
+      "verified": "yes"
+    },
+    {
+      "name": "PhageScope",
+      "category": "unified-resource",
+      "tier": "useful",
+      "body_sites": "Multi-body-site (aggregates human gut, oral, skin phages plus environmental/marine phages); not body-site stratified in the interface",
+      "site_tags": [
+        "Multi-site",
+        "Gut",
+        "Oral",
+        "Skin"
+      ],
+      "lifespan": "Not stratified",
+      "organism_scope": "DNA bacteriophages; 873,718 phage sequences aggregated from GenBank, RefSeq, EMBL, DDBJ, PhagesDB, GPD, GVD, MGV and metagenomic datasets; ~43M annotated proteins",
+      "identifier": "10.1093/nar/gkad979",
+      "identifier_url": "https://doi.org/10.1093/nar/gkad979",
+      "url": "https://phagescope.deepomics.org",
+      "size_scope": "873,718 phage sequences with tens of millions of annotated ORFs/proteins (~43M); annotations from ~15 tools covering genome completeness, host range, lifestyle, taxonomy, ORFs/proteins, terminators, tRNA/tmRNA, anti-CRISPR proteins, CRISPR arrays, virulence factors, AMR genes and transmembrane proteins",
+      "access_modality": "mixed",
+      "summary": "PhageScope is a database of DNA bacteriophage genomes that re-aggregates 873,718 phage sequences from public repositories (GenBank, RefSeq, EMBL, DDBJ, PhagesDB, GPD, GVD and MGV) and metagenomic datasets, then runs them through one annotation pipeline. Annotations cover roughly 43 million predicted proteins along with genome completeness, host, lifestyle, taxonomy, terminators, tRNA/tmRNA, anti-CRISPR proteins, CRISPR arrays, virulence factors, antimicrobial resistance genes and transmembrane proteins. The interface is not stratified by body site, so human gut, oral and skin phages are pooled with environmental and marine phages; it functions as a cross-body-site phage reference rather than a curated human-virome collection.",
+      "access_note": "Browsable web portal at phagescope.deepomics.org with bulk downloads of sequences and annotations; code at github.com/deepomicslab/PhageScope. No dedicated SRA/ENA or BioProject accession (it re-aggregates existing public repositories); cite via DOI 10.1093/nar/gkad979.",
+      "verified": "yes"
+    },
+    {
+      "name": "Unified Human Virome Database (UHVDB)",
+      "category": "unified-resource",
+      "tier": "useful",
+      "body_sites": "Gastrointestinal, airway, skin, urogenital",
+      "site_tags": [
+        "Multi-site",
+        "Gut",
+        "Respiratory",
+        "Skin",
+        "Urogenital"
+      ],
+      "lifespan": "Mixed adult (aggregated public human metagenomes plus newly sequenced adult cystic fibrosis airway samples)",
+      "organism_scope": "Viral genomes (DNA-virus/phage dominated) mined from human metagenomes; includes a toolkit for inferring likely-active viruses",
+      "identifier": "10.64898/2026.05.01.722327",
+      "identifier_url": "https://doi.org/10.64898/2026.05.01.722327",
+      "url": "https://www.biorxiv.org/content/10.64898/2026.05.01.722327v2",
+      "size_scope": "575,497 high-quality, annotated viral genomes from human gastrointestinal, airway, skin, and urogenital sample metagenomes; described as ~3x larger than prior viral databases; expands airway representation with 155,129 airway-assembly viruses absent from prior databases. Ships an associated toolkit that uses UHVDB to characterize viruses and infer potential activity from metagenomes; applied to 1,983 cystic fibrosis airway metagenomes.",
+      "access_modality": "mixed",
+      "summary": "The Unified Human Virome Database (UHVDB) is a collection of 575,497 high-quality, annotated viral genomes (predominantly DNA viruses and phages) mined from human gastrointestinal, airway, skin, and urogenital metagenomes, described by Miller, Pope, Hoffman and colleagues at the University of Washington in a 2026 bioRxiv preprint. It reports roughly three times the size of prior viral databases and adds substantial airway representation (155,129 airway-assembly viruses not present in earlier collections), and it ships an associated toolkit that uses the database to characterize viruses and infer likely activity from metagenomes, applied in the paper to 1,983 cystic fibrosis airway samples. Note that the resource is currently at preprint stage under a CC-BY-ND license, and the newly generated cystic fibrosis sequencing reads (SRA BioProject PRJNA1457048) are embargoed until publication.",
+      "access_note": "Bulk download from the Zenodo \"uhvdb\" community as versioned releases (latest uhvdb-v5, DOI 10.5281/zenodo.19956287); the toolkit code is on GitHub (UHVDB/toolkit), while the study's own new cystic fibrosis reads (SRA PRJNA1457048) remain embargoed until publication.",
+      "verified": "yes"
+    },
+    {
+      "name": "Vaginal Microbial Genome Collection (VMGC) - viral fraction",
+      "category": "unified-resource",
+      "tier": "useful",
+      "body_sites": "Urogenital / reproductive (vagina)",
+      "site_tags": [
+        "Urogenital"
+      ],
+      "lifespan": "Reproductive-age women (adults); includes some pregnancy cohorts",
+      "organism_scope": "DNA viruses, predominantly bacteriophages; viral component comprises 14,224 viral genomes clustered into 4,263 species-level vOTUs, part of a multi-kingdom collection (786 prokaryote species, 11 fungi, plus viruses)",
+      "identifier": "10.5281/zenodo.10457006",
+      "identifier_url": "https://doi.org/10.5281/zenodo.10457006",
+      "url": "https://github.com/RChGO/VMGC",
+      "size_scope": "Viral fraction: 14,224 viral genomes clustered into 4,263 species-level vOTUs (VMGC_virus.tar.gz, ~206 MB; VMGC_virus.info ~1 MB). Part of the full VMGC of 33,804 reference genomes (786 prokaryote species / 19,542 prokaryotic genomes ~8.7 GB, 11 fungi / 42 eukaryotic genomes ~200 MB, plus a Kraken/Bracken DB ~2.2 GB). Built from 4,472 vaginal metagenomes across 14 countries; ~86% of vOTUs absent from other virome databases.",
+      "access_modality": "download",
+      "summary": "The Vaginal Microbial Genome Collection (VMGC) is a multi-kingdom reference genome set for the human vaginal microbiome, built from 4,472 vaginal metagenomes sampled across 14 countries and described in Nature Microbiology (2024). Its viral fraction consists of 14,224 DNA virus genomes, predominantly bacteriophages, clustered into 4,263 species-level viral operational taxonomic units (vOTUs), of which roughly 86 percent were absent from other virome databases at the time of publication. The full collection also includes 786 prokaryote species and 11 fungi, and the associated analysis pipelines are available on GitHub.",
+      "access_note": "Bulk download: the viral fraction (VMGC_virus.tar.gz, ~206 MB) and its metadata are on Zenodo (DOI 10.5281/zenodo.10457006), with code and documentation at github.com/RChGO/VMGC; there is no browsable portal or API.",
+      "verified": "yes"
+    },
+    {
+      "name": "Virome Data Explorer - longitudinal respiratory RNA virome (Manhattan surveillance cohort)",
+      "category": "unified-resource",
+      "tier": "useful",
+      "body_sites": "Respiratory (nasopharyngeal swabs)",
+      "site_tags": [
+        "Respiratory"
+      ],
+      "lifespan": "Multi-age surveillance, all participants younger than 65 at enrollment: 16% children under 10, 20% teenagers (14-18), 64% adults.",
+      "organism_scope": "RNA respiratory viruses (metatranscriptomic RNA-seq, Pandora pipeline) with paired human host transcriptomics; bacterial co-infection signals also profiled",
+      "identifier": "GSE223679",
+      "identifier_url": "https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE223679",
+      "url": "https://journals.plos.org/plosbiology/article?id=10.1371/journal.pbio.3002089",
+      "size_scope": "214 participants enrolled, 104 analyzed; 4,215 nasopharyngeal samples collected, 847 sequenced; 19-month surveillance window (October 2016 to April 2018) in Manhattan (New York City). Metatranscriptomic RNA-seq with paired human host transcriptomics; symptom scores and sample metadata in supplementary material.",
+      "access_modality": "mixed",
+      "summary": "The Virome Data Explorer accompanies a longitudinal metatranscriptomic study of the respiratory RNA virome in a Manhattan surveillance cohort (214 participants enrolled and 104 analyzed, all younger than 65, with 4,215 nasopharyngeal swabs collected and 847 sequenced over a 19-month window from October 2016 to April 2018). Raw RNA-seq reads and count tables cover RNA respiratory viruses alongside paired human host transcriptomics and bacterial co-infection signals, with symptom scores and sample metadata in the supplementary material. Analysis used the Pandora pipeline (available on GitHub), and results are described in the associated PLOS Biology (2024) article; a browsable web portal exists but is served from a bare HTTP IP address that may be unstable and is not the archival data source.",
+      "access_note": "Bulk download of raw RNA-seq and count tables from NCBI GEO accession GSE223679; a browsable web portal is also hosted, though on an unstable HTTP IP rather than a durable archive.",
+      "verified": "yes"
+    },
+    {
+      "name": "ICTV Virus Metadata Resource (VMR) + Master Species List",
+      "category": "reference-taxonomy",
+      "tier": "core",
+      "body_sites": "N/A (taxonomy reference); the VMR \"host source\" field annotates which viruses are human-infecting",
+      "site_tags": [
+        "Reference/taxonomy"
+      ],
+      "lifespan": "N/A",
+      "organism_scope": "All ICTV-classified viruses across every host domain, including the full Orthornavirae (RNA virus) taxonomy. The VMR lists an exemplar isolate (plus optional additional isolates) per species; the MSL is the complete ratified species/genus/family hierarchy.",
+      "identifier": "10.5281/zenodo.15042255",
+      "identifier_url": "https://doi.org/10.5281/zenodo.15042255",
+      "url": "https://ictv.global/vmr",
+      "size_scope": "MSL41 (2025-2026 release, ratified February 2026, posted March 20, 2026) recognizes 17,554 virus species across the full ICTV rank hierarchy. The MSL is the complete ratified taxonomy spreadsheet (~1.72 MB xlsx). The companion VMR spreadsheet (~3.66 MB xlsx) provides one exemplar isolate per species plus additional well-characterized isolates, each with GenBank and RefSeq accession numbers (when available), suggested abbreviation, genome composition, and host source. Covers all classified viruses including the complete Orthornavirae RNA-virus taxonomy used to place novel RNA viruses.",
+      "access_modality": "mixed",
+      "summary": "The ICTV Virus Metadata Resource (VMR) and Master Species List (MSL) together define the official virus taxonomy ratified by the International Committee on Taxonomy of Viruses. The MSL is the full ratified rank hierarchy (family, genus, species) for all classified viruses, and the current release (MSL41, 2025-2026) recognizes 17,554 species; the companion VMR lists an exemplar isolate per species with its GenBank and RefSeq accessions, genome composition, suggested abbreviation, and host source, covering the complete Orthornavirae (RNA virus) taxonomy used to place novel RNA viruses. The VMR host source field indicates which viruses are human-infecting, and both files are versioned and citable through a stable Zenodo concept DOI (10.5281/zenodo.15042255), which lets HVP datasets map names to a fixed taxonomy release.",
+      "access_note": "Bulk download: both spreadsheets are public Excel files from the ICTV site (ictv.global/vmr and ictv.global/msl) and are archived with per-version Zenodo DOIs; the MSL is also indexed as a GBIF checklist.",
+      "verified": "yes"
+    },
+    {
+      "name": "Human Skin DNA Virome Reference Catalog (SVD; Li et al. 2025)",
+      "category": "reference-taxonomy",
+      "tier": "useful",
+      "body_sites": "Skin; stratified by microenvironment (oily / dry / moist), all confirmed in the abstract. Candidate's \"21 anatomical sites\" is NOT stated in the abstract (which describes microenvironments, not a site count); treat as unverified pending the full text.",
+      "site_tags": [
+        "Multi-site",
+        "Skin"
+      ],
+      "lifespan": "Mixed adult (samples sourced globally from 6 published skin metagenome studies)",
+      "organism_scope": "Human skin DNA viruses / bacteriophages. 20,927 viral sequences clustered into 2,873 vOTUs; 90.85% (~91%) represent previously unknown viruses (confirmed in abstract IMPORTANCE section). Phages predicted to infect skin bacteria (Pseudomonas, Klebsiella, Staphylococcus), mostly class Caudoviricetes.",
+      "identifier": "10.1128/spectrum.01178-25",
+      "identifier_url": "https://doi.org/10.1128/spectrum.01178-25",
+      "url": "https://github.com/lizhiming11/skin_virus",
+      "size_scope": "2,873 vOTUs derived from 20,927 viral sequences, built from 2,760 skin metagenomes drawn from 6 previously published skin studies (globally sourced). 90.85% of viral sequences are previously unknown. Three downloadable assets: high-medium-quality genomes (High-medium.fasta), representative genomes (virus_rep.fa), and an annotation table with taxonomy/quality/host (ann.xlsx). All data files are hosted on Baidu Pan (pan.baidu.com) with extraction code 1234 \u2014 a meaningful accessibility caveat versus an NCBI/Zenodo deposit; the GitHub repo hosts code and the download links only.",
+      "access_modality": "download",
+      "summary": "The Human Skin DNA Virome Reference Catalog (Li et al., Microbiology Spectrum, 2025) is a reference taxonomy of human skin DNA viruses assembled from 2,760 skin metagenomes drawn from six previously published studies collected globally. It groups 20,927 viral sequences into 2,873 viral operational taxonomic units (vOTUs), of which 90.85% represent previously unknown viruses, and reports enrichment patterns across oily, dry, and moist skin microenvironments; most predicted phages fall in the class Caudoviricetes and are inferred to infect skin bacteria such as Pseudomonas, Klebsiella, and Staphylococcus. The catalog provides high- and medium-quality genomes, representative genomes, and an annotation table with taxonomy, quality, and host assignments.",
+      "access_note": "Bulk download only: the GitHub repo (lizhiming11/skin_virus) holds code and download links, while the genome and annotation files are hosted on Baidu Pan (extraction code 1234), with no NCBI, ENA, or Zenodo deposit.",
+      "verified": "yes"
+    },
+    {
+      "name": "ICTV Crassvirales taxonomy and crAss-like phage reference set",
+      "category": "reference-taxonomy",
+      "tier": "useful",
+      "body_sites": "Gut (fecal); crAss-like phages are the most abundant and prevalent virus in the human gut",
+      "site_tags": [
+        "Gut",
+        "Reference/taxonomy"
+      ],
+      "lifespan": "All ages; crAssphage colonizes the human gut from infancy and persists through adulthood",
+      "organism_scope": "dsDNA tailed bacteriophages of the order Crassvirales (crAss-like phages), infecting Bacteroidota/Bacteroidetes hosts; ~4 families (Intestiviridae, Steigviridae, Crevaviridae, Suoliviridae)",
+      "identifier": "NCBI:txid1978007",
+      "identifier_url": "https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=1978007",
+      "url": "https://ictv.global/taxonomy",
+      "size_scope": "Order Crassvirales, established by ICTV (taxid 1978007). Per the 2022 ICTV bacterial viruses subcommittee update the order comprises ~4 families (Intestiviridae, Steigviridae, Crevaviridae, Suoliviridae), ~11 subfamilies, ~42 genera, and ~73 species; counts grow with each MSL/VMR release. Members are large circular dsDNA tailed phages (~90-100 kb; prototypical crAssphage/Carjivirus communis = 97,065 bp, JQ995537.1). The ICTV VMR provides one exemplar reference genome accession per species; the MSL provides the controlled taxonomic vocabulary (realm->species) for classification and cross-cohort naming.",
+      "access_modality": "mixed",
+      "summary": "The International Committee on Taxonomy of Viruses (ICTV) defines the order Crassvirales (NCBI Taxonomy txid1978007), the crAss-like bacteriophages, which are large circular dsDNA tailed phages (roughly 90 to 100 kb) that infect Bacteroidota hosts and are among the most abundant and prevalent viruses in the human gut. The ICTV framework provides the controlled taxonomic vocabulary (realm through species) via the Master Species List and one exemplar reference genome per species via the Virus Metadata Resource; as of the 2022 bacterial viruses subcommittee update the order comprised about 4 families (Intestiviridae, Steigviridae, Crevaviridae, Suoliviridae), roughly 42 genera and 73 species, with counts changing at each release. The prototypical crAssphage exemplar is Carjivirus communis (GenBank JQ995537.1, 97,065 bp), though note that this GenBank record is currently marked suppressed and removed from distribution at the submitter's request.",
+      "access_note": "Browsable taxonomy at https://ictv.global/taxonomy; the Master Species List (MSL) and Virus Metadata Resource (VMR) are downloadable as spreadsheets from ictv.global, and exemplar genomes resolve individually by GenBank accession (no bulk sequence archive or API for the taxonomy itself).",
+      "verified": "yes"
+    },
+    {
+      "name": "INPHARED",
+      "category": "reference-taxonomy",
+      "tier": "useful",
+      "body_sites": "N/A (cultured phage reference)",
+      "site_tags": [
+        "Reference/taxonomy"
+      ],
+      "lifespan": "N/A",
+      "organism_scope": "complete cultured bacteriophage genomes",
+      "identifier": "",
+      "identifier_url": "",
+      "url": "https://millardlab.org/bacteriophage-genomics/inphared/",
+      "size_scope": "tens of thousands of filtered complete phage genomes; updated monthly",
+      "access_modality": "download",
+      "summary": "INPHARED is a monthly-updated, filtered set of complete bacteriophage genomes drawn from GenBank, maintained by the Millard Lab. It gives a consistent reference for phage genomics and taxonomy and underpins tools used for gut-phage classification. New releases are published each month.",
+      "access_note": "Monthly downloads from the Millard Lab site (millardlab.org).",
+      "verified": "retrieved"
+    },
+    {
+      "name": "RdRp-scan (Charon, Holmes et al. 2022)",
+      "category": "reference-taxonomy",
+      "tier": "useful",
+      "body_sites": "N/A (detection/annotation reference); applicable to any human metatranscriptome",
+      "site_tags": [
+        "Reference/taxonomy",
+        "Cross-cutting"
+      ],
+      "lifespan": "N/A",
+      "organism_scope": "RNA viruses (Riboviria)",
+      "identifier": "10.1093/ve/veac082",
+      "identifier_url": "https://doi.org/10.1093/ve/veac082",
+      "url": "https://github.com/JustineCharon/RdRp-scan",
+      "size_scope": "Version 0.90; 68 RdRp HMM profiles across the five major Riboviria phyla plus curated RdRp sequence database, reference alignments, phylogeny, and catalytic-motif databases.",
+      "access_modality": "download",
+      "summary": "RdRp-scan (Charon, Buchmann, Sadiq, and Holmes, Virus Evolution 2022) is a reference resource for detecting and annotating the RNA-dependent RNA polymerase (RdRp) of divergent RNA viruses (Riboviria) in metagenomic and metatranscriptomic sequence data. Version 0.90 contains 68 RdRp HMM profiles spanning the five major Riboviria phyla, a curated RdRp sequence database with taxonomy and host metadata (formatted for HMMER3 and DIAMOND), taxon-specific and master reference alignments, a FastTree phylogeny, and catalytic-motif databases. Because it is applicable to any human metatranscriptome, it can be used to call RNA viruses in HVP cohorts and to place candidate sequences phylogenetically, though it is a detection and annotation reference rather than a body-site-specific dataset.",
+      "access_note": "Bulk download from the GitHub repository (https://github.com/JustineCharon/RdRp-scan, v0.90); no browsable portal or API.",
+      "verified": "yes"
+    },
+    {
+      "name": "RVDB (Reference Viral DataBase; FDA/CBER)",
+      "category": "reference-taxonomy",
+      "tier": "useful",
+      "body_sites": "Cross-cutting; built for novel-virus detection in human clinical and biologics samples",
+      "site_tags": [
+        "Reference/taxonomy",
+        "Cross-cutting"
+      ],
+      "lifespan": "N/A",
+      "organism_scope": "All viral/virus-like sequences (DNA and RNA), eukaryotic-virus focused, manually curated to reduce phage and non-viral content",
+      "identifier": "10.1128/mSphereDirect.00069-18",
+      "identifier_url": "https://doi.org/10.1128/mSphereDirect.00069-18",
+      "url": "https://rvdb.dbi.udel.edu/",
+      "size_scope": "Current release v32.0 (2026-05-08). Distributed as U-RVDB (unclustered, non-redundant nucleotide FASTA) and C-RVDB (clustered/representative nucleotide FASTA), plus a SQLite database, annotation lists, and taxonomy files; a protein version (RVDBprot) is also available. Covers all viral and virus-like DNA and RNA sequences from GenBank, eukaryotic-virus focused, with phages, misannotated, irrelevant, and non-viral sequences reduced by manual curation. Exact sequence count for v32.0 is not stated on the landing page (the original 2018 U-RVDB v10 held ~2.4 million entries; current releases are substantially larger).",
+      "access_modality": "mixed",
+      "summary": "RVDB (Reference Viral DataBase) is a manually curated reference database of viral and virus-like nucleotide sequences (DNA and RNA) compiled from GenBank by Arifa Khan's group at CBER/FDA, built to improve detection of novel viruses in high-throughput sequencing of human clinical and biologics samples. Curation reduces phage, misannotated, and non-viral content and keeps the focus on eukaryotic viruses, which lowers background noise when screening for viruses in host-derived data. It is distributed in two forms, U-RVDB (unclustered, non-redundant) and C-RVDB (clustered representative sequences), along with a SQLite database, annotation and taxonomy files, and a separate protein version (RVDBprot); the current release is v32.0 (2026-05-08).",
+      "access_note": "Public bulk download of FASTA, SQLite, annotation, and taxonomy files from the RVDB portal (https://rvdb.dbi.udel.edu/); no SRA/ENA accession, since RVDB is a curated compilation rather than a sequencing deposit.",
+      "verified": "yes"
+    },
+    {
+      "name": "SCANellome V2 anellovirus reference database and typing tool",
+      "category": "reference-taxonomy",
+      "tier": "useful",
+      "body_sites": "Blood/plasma and other body sites (primate anelloviruses from metagenomics)",
+      "site_tags": [
+        "Blood/plasma",
+        "Reference/taxonomy"
+      ],
+      "lifespan": "N/A (reference resource)",
+      "organism_scope": "DNA viruses, Anelloviridae; human and non-human primate anelloviruses; classifies at genus/species/genotype level; Illumina + Nanopore compatible",
+      "identifier": "10.3390/v16091349",
+      "identifier_url": "https://doi.org/10.3390/v16091349",
+      "url": "https://laubscher.github.io/Anelloviruses/SCANellome",
+      "size_scope": "Reference database of over 18,000 primate anellovirus ORF1 sequences; V2 (updated 8 July 2024) added 916 complete ORF1 sequences, generating 134 new CD-HIT (90% identity) representative sequences and identifying 206 potential new species (including new non-human primate species proposed to ICTV). Typing tool assigns anellome composition at genus, species, and genotype level from raw Illumina and Nanopore metagenomics data. Note: the catalog draft's \"304 species across 12 genera\" and \"Zenodo\" claims were not confirmed against the authoritative source.",
+      "access_modality": "download",
+      "summary": "SCANellome V2 is a reference sequence database and typing tool for primate anelloviruses (family Anelloviridae), covering both human and non-human primate viruses. The database holds more than 18,000 anellovirus ORF1 sequences (the July 2024 update added 916 complete ORF1 sequences, 134 new CD-HIT representative sequences at 90 percent identity, and 206 candidate new species), and the accompanying tool assigns anellome composition at the genus, species, and genotype level from raw Illumina or Nanopore metagenomic reads. It is distributed as downloadable software under GPL-3.0 with peer-reviewed citable references, giving a consistent taxonomy backbone for the anelloviruses that commonly dominate blood and plasma virome datasets.",
+      "access_note": "Download precompiled binaries from the SCANellome homepage (laubscher.github.io/Anelloviruses/SCANellome) or source and releases from the GitHub repository (github.com/Laubscher/SCANellome); no SRA/ENA accession or Zenodo deposit is available.",
+      "verified": "yes"
+    },
+    {
+      "name": "Deep plasma virome: anellovirus diversity in healthy donors (Cebria-Mendoza / Sanjuan lab)",
+      "category": "cohort-dataset",
+      "tier": "useful",
+      "body_sites": "Blood / plasma",
+      "site_tags": [
+        "Blood/plasma"
+      ],
+      "lifespan": "Adulthood (healthy blood donors)",
+      "organism_scope": "DNA and RNA viruses; anelloviruses dominate (~97% of reads) plus a human pegivirus genome",
+      "identifier": "PRJNA691135",
+      "identifier_url": "https://www.ncbi.nlm.nih.gov/bioproject/PRJNA691135",
+      "url": "https://www.ncbi.nlm.nih.gov/bioproject/PRJNA691135",
+      "size_scope": "120 healthy Spanish blood donors pooled into 12 plasma pools (10 donors each); raw sequence reads in SRA under BioProject PRJNA691135. Includes a methods-comparison series (M1-M8: direct extraction vs high centrifugation, 0.45 vs 1 um filtration, paired viral DNA and RNA libraries) plus pooled donor libraries P1-P12 (DNA and RNA). Anelloviruses dominate (~97% of reads); one complete human pegivirus genome recovered. Submitter: Universitat de Valencia (Sanju\u00e1n lab).",
+      "access_modality": "download",
+      "summary": "This dataset holds raw sequencing reads from a deep plasma virome study of 120 healthy Spanish blood donors, pooled into 12 plasma pools of 10 donors each, generated by the Sanjuan lab at the Universitat de Valencia (Cebria-Mendoza et al., Scientific Reports 2021, DOI 10.1038/s41598-021-86427-4). The libraries cover both viral DNA and RNA and include a methods-comparison series (samples M1 to M8, testing direct extraction versus high-speed centrifugation and 0.45 versus 1 um filtration) alongside the pooled donor libraries (P1 to P12). Anelloviruses account for roughly 97 percent of reads and one complete human pegivirus genome was recovered, making this a useful healthy-baseline reference for blood and plasma virome work.",
+      "access_note": "Raw reads are publicly downloadable from NCBI SRA under BioProject PRJNA691135 (no browsable portal; retrieve via SRA/ENA accession or the SRA Toolkit).",
+      "verified": "yes"
+    },
+    {
+      "name": "Expanding known viral diversity in the healthy infant gut (COPSAC2010; Shah et al. 2023)",
+      "category": "cohort-dataset",
+      "tier": "useful",
+      "body_sites": "Gut (infant fecal)",
+      "site_tags": [
+        "Gut"
+      ],
+      "lifespan": "Infancy / early life (1-year-olds)",
+      "organism_scope": "DNA viruses / bacteriophages (Caudoviricetes-dominated, mostly novel temperate phage families); ~10,000 viral species in 248 family-level clades",
+      "identifier": "PRJEB46943",
+      "identifier_url": "https://www.ncbi.nlm.nih.gov/bioproject/PRJEB46943",
+      "url": "https://www.ebi.ac.uk/ena/browser/view/PRJEB46943",
+      "size_scope": "Age-1-year faecal DNA viromes deeply sequenced from 647 healthy Danish infants in the population-based COPSAC2010 cohort; reads assembled into an exhaustive taxonomy of known and novel DNA viruses (~10,000 viral species across 248 family-level clades). Raw reads downloadable at ENA (PRJEB46943 read_run FASTQ + submitted files), curated genomes/taxonomy via the EarlyVir portal (and FigShare per the paper).",
+      "access_modality": "mixed",
+      "summary": "This dataset from the population-based COPSAC2010 cohort contains deeply sequenced faecal DNA viromes from 647 healthy Danish infants sampled at one year of age. The assembled sequences were organized into a taxonomy of roughly 10,000 viral species across 248 family-level clades, dominated by Caudoviricetes and including many previously undescribed, mostly temperate bacteriophage families. It was published in Nature Microbiology in 2023 (Shah et al.) and serves both as an early-life reference point and as an infant gut phage catalogue.",
+      "access_note": "Raw reads are publicly downloadable from ENA under BioProject PRJEB46943 (FASTQ read_run and submitted files); curated genomes and taxonomy are available through the browsable copsac.com/earlyvir portal (and FigShare per the paper, though no FigShare DOI was independently verified here).",
+      "verified": "yes"
+    },
+    {
+      "name": "Human plasma anellome across the lifespan (young vs aged cohorts)",
+      "category": "cohort-dataset",
+      "tier": "useful",
+      "body_sites": "Blood / plasma",
+      "site_tags": [
+        "Blood/plasma"
+      ],
+      "lifespan": "Spans early life and aging: young cohort 0-16 years (n=55) and older-adult cohort 63-100 years (n=163)",
+      "organism_scope": "DNA viruses, Anelloviridae (species-level anellome)",
+      "identifier": "10.3389/fmicb.2025.1716110",
+      "identifier_url": "https://doi.org/10.3389/fmicb.2025.1716110",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12852332/",
+      "size_scope": "218 plasma samples across two age-stratified cohorts: young (0-16 y, n=55) and older adults (63-100 y, n=163). Untargeted DNA viral metagenomics of plasma, resolving the Anelloviridae anellome at species level. Older adults showed near-universal anellovirus detection and significantly higher abundance than youth; anellome composition tracked with age, sex, cytokines, and cardiometabolic outcomes. Raw sequencing reads deposited to SRA under BioProject PRJNA1314973 but not yet publicly resolvable as of 2026-07-12.",
+      "access_modality": "download",
+      "summary": "This dataset comes from an untargeted DNA viral metagenomic study of human plasma that resolves the Anelloviridae anellome at species level across 218 samples drawn from two age-stratified cohorts: a young group (0 to 16 years, n=55) and older adults (63 to 100 years, n=163). The study reports near-universal anellovirus detection and higher abundance in older adults, with anellome composition tracking age, sex, cytokine levels, and cardiometabolic outcomes, positioning the anellome as a candidate immune and aging marker in blood. The documenting publication (Frontiers in Microbiology, 2026; DOI 10.3389/fmicb.2025.1716110) is verified and open access, but the raw sequencing reads are not yet retrievable.",
+      "access_note": "Open-access paper readable at PMC (PMC12852332); raw reads are listed under SRA BioProject PRJNA1314973 but that accession does not resolve in NCBI or ENA as of 2026-07-12, so the reads are not currently downloadable.",
+      "verified": "yes"
+    },
+    {
+      "name": "The blood DNA virome in 8,000 humans (Telenti / Human Longevity Inc)",
+      "category": "cohort-dataset",
+      "tier": "useful",
+      "body_sites": "Blood (whole-blood WGS off-target/non-human reads)",
+      "site_tags": [
+        "Blood/plasma"
+      ],
+      "lifespan": "Adulthood (broad adult population)",
+      "organism_scope": "Human DNA viruses; 19 DNA-virus genera detected including anelloviruses, herpesviruses, papillomaviruses, polyomaviruses, adenovirus, and parvovirus B19",
+      "identifier": "10.1371/journal.ppat.1006292",
+      "identifier_url": "https://doi.org/10.1371/journal.ppat.1006292",
+      "url": "https://journals.plos.org/plospathogens/article?id=10.1371/journal.ppat.1006292",
+      "size_scope": "8,240 individuals (whole-genome sequencing of blood). Virome characterized from non-human/off-target WGS reads; 19 human DNA viruses reported. PLOS Pathogens, 2017-03-22. Authors: Moustafa, Xie, Kirkness, Biggs, Wong, Turpaz, Bloom, Delwart, Nelson, Venter (Telenti among HLI authors).",
+      "access_modality": "mixed",
+      "summary": "This resource is a population-scale survey of the human blood DNA virome by Moustafa and colleagues at Human Longevity Inc. (Telenti among the authors), published open-access in PLOS Pathogens in 2017. Working from the non-human, off-target reads in whole-genome sequencing of 8,240 individuals, the study catalogs 19 human DNA viruses, including anelloviruses, herpesviruses, papillomaviruses, polyomaviruses, adenovirus, and parvovirus B19, and reports their prevalence and diversity across a broad adult population. It serves mainly as a prevalence and diversity reference: the paper and its supplementary tables remain available, but the original HLI Open Data virome download portal is now defunct (returns HTTP 404), and the underlying WGS data sit behind a Human Longevity Inc. Data Access Agreement, so the read-level data are not openly downloadable.",
+      "access_note": "Read the open-access paper and its supplementary tables at DOI 10.1371/journal.ppat.1006292 (PMID 28328962); no SRA/ENA/BioProject accession exists, the former HLI Open Data virome portal is now dead (404), and read-level WGS is gated behind a Human Longevity Inc. Data Access Agreement.",
+      "verified": "yes"
+    },
+    {
+      "name": "The Human Gut Virome Is Highly Diverse, Stable, and Individual Specific (Shkoporov et al. 2019)",
+      "category": "cohort-dataset",
+      "tier": "useful",
+      "body_sites": "Gut (fecal)",
+      "site_tags": [
+        "Gut"
+      ],
+      "lifespan": "Adulthood",
+      "organism_scope": "DNA bacteriophages / VLP (virus-like particle) fecal virome; dominated by crAss-like phages and Microviridae, plus other Caudovirales",
+      "identifier": "PRJNA545408",
+      "identifier_url": "https://www.ncbi.nlm.nih.gov/bioproject/PRJNA545408",
+      "url": "https://www.cell.com/cell-host-microbe/fulltext/S1931-3128(19)30476-7",
+      "size_scope": "Longitudinal cohort of 10 healthy adults (aged 23-54; 4 male, 6 female) with fecal VLP viromes sampled at ~monthly intervals across 12 months (12 synchronous time points; one subject given 3 extra follow-up samples at 19, 20, 26 months). Raw sequencing data and assembled contigs deposited under BioProject PRJNA545408; ENA/SRA mirror holds 253 read runs (SRP199881). Published in Cell Host & Microbe 26(4):527-541.e5, Oct 2019.",
+      "access_modality": "download",
+      "summary": "This is a longitudinal cohort dataset of fecal virus-like-particle (VLP) viromes from 10 healthy adults sampled at roughly monthly intervals over 12 months, with one subject followed further out to 26 months (Shkoporov et al., Cell Host & Microbe 2019). The sequenced viromes are DNA bacteriophage communities dominated by crAss-like phages and Microviridae alongside other Caudovirales, and the study reports that individual gut viromes are diverse and stable over time and largely specific to each person. Raw reads and assembled contigs are publicly downloadable under NCBI BioProject PRJNA545408 (SRA study SRP199881), which holds 253 read runs.",
+      "access_note": "Public download via NCBI/ENA using BioProject PRJNA545408 or SRA study SRP199881 (253 read runs, plus assembled contigs); no browsable portal or API specific to this dataset.",
+      "verified": "yes"
+    },
+    {
+      "name": "Centenarian gut virome (Johansen et al.)",
+      "category": "cohort-dataset",
+      "tier": "niche",
+      "body_sites": "Gut (fecal)",
+      "site_tags": [
+        "Gut"
+      ],
+      "lifespan": "Extreme aging / longevity (centenarians contrasted with younger and older adults)",
+      "organism_scope": "DNA bacteriophages (including previously undescribed Clostridia-associated viral genera) plus eukaryotic viruses; virome derived from bulk fecal metagenomes",
+      "identifier": "10.5281/zenodo.6579480",
+      "identifier_url": "https://doi.org/10.5281/zenodo.6579480",
+      "url": "https://www.nature.com/articles/s41564-023-01370-6",
+      "size_scope": "Reanalysis of previously published gut metagenomes from 195 individuals (Japanese and Sardinian cohorts), spanning centenarians versus younger adults (>18 yr) and older adults (>60 yr). Derived virome resource on Zenodo (~80 MB total) comprises vOTU nucleotide sequences (vOTUs.fna.gz), provirus sequences, a VOG functional annotation table, an MGV-based phylogenetic tree, and an MGV master table. Study reports a more diverse centenarian virome with previously undescribed viral genera (including Clostridia-associated phages), higher lytic activity, and enrichment of phage-encoded auxiliary genes in sulfate metabolism.",
+      "access_modality": "mixed",
+      "summary": "This resource is the derived virome from Johansen et al. (Nature Microbiology, 2023), a reanalysis of previously published gut metagenomes from 195 Japanese and Sardinian individuals that contrasts centenarians with younger and older adults. The Zenodo deposit (about 80 MB) contains vOTU nucleotide sequences, provirus sequences, a VOG functional annotation table, and an MGV-based phylogenetic tree and master table, describing DNA bacteriophages (including previously undescribed Clostridia-associated genera) alongside eukaryotic viruses. The study reports a more diverse centenarian virome with higher lytic activity and phage-encoded auxiliary genes in sulfate metabolism; the underlying metagenomes were reused, so no new raw-read accession was minted by this work.",
+      "access_note": "Derived vOTU genomes and annotations are a public bulk download from Zenodo (DOI 10.5281/zenodo.6579480); the analysis pipeline is on GitHub (RasmussenLab/vCentenarian). No new raw-read SRA/ENA accession; source metagenomes come from prior studies.",
+      "verified": "yes"
+    },
+    {
+      "name": "Disease-specific alterations in the enteric virome in IBD (Norman et al. 2015)",
+      "category": "cohort-dataset",
+      "tier": "niche",
+      "body_sites": "Gut (fecal)",
+      "site_tags": [
+        "Gut"
+      ],
+      "lifespan": "Adulthood",
+      "organism_scope": "DNA bacteriophages (Caudovirales-dominated) plus eukaryotic DNA viruses; paired 16S rRNA bacterial profiling",
+      "identifier": "PRJEB7772",
+      "identifier_url": "https://www.ncbi.nlm.nih.gov/bioproject/PRJEB7772",
+      "url": "https://www.cell.com/fulltext/S0092-8674(15)00003-3",
+      "size_scope": "338 Illumina sequencing runs across 338 samples deposited at ENA/SRA under PRJEB7772 (WashU submission). Comprises VLP-enriched shotgun metagenomes (WGS) plus paired 16S rRNA amplicon bacterial profiling from Crohn's disease and ulcerative colitis patients and healthy controls, spanning multiple independent cohorts (Chicago UC, USC/Cedars-Sinai CD, and household controls). Key finding: disease- and cohort-specific expansion of Caudovirales bacteriophages independent of bacterial community change.",
+      "access_modality": "download",
+      "summary": "Norman et al. (2015) is a case-control study of the gut virome in inflammatory bowel disease, comparing virus-like particle metagenomes from Crohn's disease and ulcerative colitis patients against healthy household controls across several independent cohorts. The dataset (PRJEB7772) comprises 338 Illumina runs, pairing VLP-enriched shotgun sequencing of DNA viruses (predominantly Caudovirales bacteriophages, plus some eukaryotic DNA viruses) with 16S rRNA bacterial profiling of the same samples. The paper reports a disease- and cohort-specific expansion of Caudovirales that was not explained by concurrent shifts in the bacterial community.",
+      "access_note": "Raw sequencing data are public at ENA/SRA under BioProject PRJEB7772 (338 runs); retrieve by accession rather than through a browsable portal.",
+      "verified": "yes"
+    },
+    {
+      "name": "Paired CSF and serum RNA virome in pediatric meningitis/encephalitis",
+      "category": "cohort-dataset",
+      "tier": "niche",
+      "body_sites": "Cerebrospinal fluid and serum",
+      "site_tags": [
+        "Blood/plasma",
+        "Neuro/CSF"
+      ],
+      "lifespan": "Infancy and childhood",
+      "organism_scope": "Bulk RNA-seq (Illumina NovaSeq, 150bp PE) metagenomic detection of human viral pathogens, spanning RNA and DNA virus families: Anelloviridae, Herpesviridae, Coronaviridae, Picornaviridae, Adenoviridae (plus bacteriophage, insect and plant viruses)",
+      "identifier": "PRJNA963158",
+      "identifier_url": "https://www.ncbi.nlm.nih.gov/bioproject/PRJNA963158",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10483426/",
+      "size_scope": "113 children (1 day\u201315 years; 67 male, 45 female) with meningitis/encephalitis; 226 paired CSF and serum specimens sequenced by Illumina NovaSeq 150bp paired-end RNA-seq. Human viral pathogens detected in 10.6% (12/113) of patients across 12 viral taxa (five human pathogen families: Anelloviridae, Herpesviridae, Coronaviridae, Picornaviridae, Adenoviridae). Raw reads deposited in SRA under BioProject PRJNA963158.",
+      "access_modality": "download",
+      "summary": "This dataset contains bulk RNA-seq data from 226 paired cerebrospinal fluid and serum specimens collected from 113 children (aged 1 day to 15 years) with meningitis or encephalitis, sequenced on Illumina NovaSeq (150bp paired-end) by the Chinese CDC. The associated analysis reports metagenomic detection of human viral pathogens in 12 of the 113 patients (10.6%) across five families (Anelloviridae, Herpesviridae, Coronaviridae, Picornaviridae, and Adenoviridae), alongside detected bacteriophage, insect, and plant viruses. Raw reads are publicly available through the SRA, making this one of few downloadable paired CSF and serum RNA-virome resources covering the neurological and blood compartments in a pediatric cohort.",
+      "access_note": "",
+      "verified": "yes"
+    },
+    {
+      "name": "RSV-infected infant nasopharyngeal targeted metagenomics (RESCEU)",
+      "category": "cohort-dataset",
+      "tier": "niche",
+      "body_sites": "Respiratory: nasopharyngeal swab",
+      "site_tags": [
+        "Respiratory"
+      ],
+      "lifespan": "Infancy (<12 months)",
+      "organism_scope": "RNA-based (strand-specific) targeted/capture metagenomics using the Castanet probe set covering >100 respiratory pathogens (RSV-A/B plus co-detected viruses e.g. rhinovirus, enterovirus, coronaviruses, adenovirus, parainfluenza, influenza, bocavirus, parechovirus, human herpesviruses; and bacteria e.g. Haemophilus, Moraxella, Streptococcus, Staphylococcus)",
+      "identifier": "PRJEB34042",
+      "identifier_url": "https://www.ncbi.nlm.nih.gov/bioproject/PRJEB34042",
+      "url": "https://www.ebi.ac.uk/ena/browser/view/PRJEB34042",
+      "size_scope": "European multicentre infant cohort; 433 RSV-positive infants under 12 months analysed (440 enrolled, 7 excluded for quality). ENA project holds ~869 read runs. Strand-specific libraries with target enrichment (Castanet probe set) from nasopharyngeal swabs; first public 2020-09-01, last updated 2021-07-11.",
+      "access_modality": "mixed",
+      "summary": "This resource (ENA BioProject PRJEB34042) holds strand-specific, target-enriched metagenomic sequencing of nasopharyngeal swabs from infants in the RESCEU project, a European multicentre study of respiratory syncytial virus infection in the first year of life. Libraries were enriched with the Castanet probe set covering more than 100 respiratory pathogens, so alongside RSV-A/B the data capture co-detected viruses (rhinovirus, enterovirus, coronaviruses, adenovirus, parainfluenza, influenza, bocavirus, parechovirus, herpesviruses) and respiratory bacteria. The associated analysis (Lin et al., Nat Commun 2024, PMID 38493135) reports 433 RSV-positive infants under 12 months, and the project contains roughly 869 read runs.",
+      "access_note": "Raw FASTQ is openly downloadable from the ENA under accession PRJEB34042 (browsable in the ENA Browser, with bulk file download via the ENA filereport API).",
+      "verified": "yes"
+    },
+    {
+      "name": "Temporal response of the human virome to immunosuppression (transplant cfDNA; De Vlaminck 2013)",
+      "category": "cohort-dataset",
+      "tier": "niche",
+      "body_sites": "Blood / plasma (cell-free DNA)",
+      "site_tags": [
+        "Blood/plasma"
+      ],
+      "lifespan": "Pediatric and adult solid-organ transplant recipients",
+      "organism_scope": "DNA viruses via cfDNA shotgun sequencing; anelloviruses and herpesviruses track immunosuppression level and antiviral therapy",
+      "identifier": "10.1016/j.cell.2013.10.034",
+      "identifier_url": "https://doi.org/10.1016/j.cell.2013.10.034",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4098717/",
+      "size_scope": "656 plasma cell-free DNA samples collected longitudinally from 96 solid-organ transplant recipients (41 adult heart, 24 pediatric heart, 31 adult lung); ~820 Gbp total shotgun sequencing (avg 1.25 Gbp/sample), Illumina HiSeq, 1x50 bp reads.",
+      "access_modality": "browse-portal",
+      "summary": "This cohort dataset accompanies De Vlaminck et al. (Cell, 2013), a study of DNA viruses detected in cell-free DNA from the plasma of solid-organ transplant recipients. It covers 656 plasma samples collected longitudinally from 96 recipients (adult heart, pediatric heart, and adult lung), sequenced by shotgun Illumina HiSeq, and reports that viral load, particularly from anelloviruses and herpesviruses, rises with the level of immunosuppression and falls with antiviral therapy. The paper states that sequencing data were deposited in the Sequence Read Archive, but no accession is given in the text and none could be confirmed in SRA, BioProject, or dbGaP, so the record here points to the publication rather than to a downloadable dataset.",
+      "access_note": "Browsable portal record only: read the paper at PMC4098717 (DOI 10.1016/j.cell.2013.10.034); the paper cites an SRA deposition but provides no accession, and none could be confirmed, so a data accession must be located (and access terms checked, as this is likely controlled human data) before any download.",
+      "verified": "yes"
+    }
+  ],
+  "note": "Curated, not exhaustive. Identifiers independently verified against CrossRef, DataCite, and NCBI. Links go to the source; see each summary for scope.",
+  "data_as_of": "2026-07-10"
+}
