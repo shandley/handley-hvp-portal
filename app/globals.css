@@ -158,6 +158,56 @@ table.awards .inst { font-family: var(--sans); }
 .legend span { display: inline-flex; align-items: center; gap: 0.4rem; }
 .legend i { width: 0.7rem; height: 0.7rem; border-radius: 50%; display: inline-block; }
 
+/* interactive consortium map */
+.map-wrap { position: relative; }
+.map .pt { cursor: pointer; transition: r 120ms ease; }
+.map .pt:focus-visible { outline: 2px solid var(--accent); outline-offset: 1px; }
+.map g.dimmed { opacity: 0.25; transition: opacity 140ms ease; }
+.map-tip {
+  position: absolute; z-index: 5; width: max-content; max-width: 300px;
+  background: var(--surface); border: 1px solid var(--line-strong); border-radius: 6px;
+  box-shadow: 0 8px 26px -10px oklch(0.25 0.026 262 / 0.35);
+  padding: 0.6rem 0.7rem; font-family: var(--sans);
+}
+.tip-head { display: flex; align-items: baseline; gap: 0.5rem; margin-bottom: 0.45rem; }
+.tip-inst { font-weight: 650; font-size: 0.9rem; color: var(--ink); letter-spacing: -0.01em; }
+.tip-region { font-size: 0.72rem; color: var(--muted); }
+.tip-awards { list-style: none; margin: 0; padding: 0; display: grid; gap: 0.6rem; }
+.tip-awards li { display: grid; gap: 0.12rem; }
+.tip-tag { display: inline-flex; align-items: center; gap: 0.35rem; font-size: 0.74rem; font-weight: 600; color: var(--ink); }
+.tip-tag i { width: 0.6rem; height: 0.6rem; border-radius: 50%; flex: none; }
+.tip-grant { font-family: var(--mono); font-size: 0.71rem; color: var(--muted); }
+.tip-title { font-size: 0.8rem; color: var(--ink); line-height: 1.3; }
+.tip-pis { font-size: 0.72rem; color: var(--muted); }
+.legend-interactive { align-items: center; }
+.legend-interactive .legend-chip {
+  display: inline-flex; align-items: center; gap: 0.4rem;
+  font-family: var(--sans); font-size: 0.8rem; color: var(--muted);
+  background: none; border: 1px solid transparent; border-radius: 999px;
+  padding: 0.12rem 0.55rem; cursor: pointer;
+  transition: color 120ms, border-color 120ms, background 120ms, opacity 120ms;
+}
+.legend-interactive .legend-chip i { width: 0.7rem; height: 0.7rem; border-radius: 50%; display: inline-block; flex: none; }
+.legend-interactive .legend-chip:hover { color: var(--ink); border-color: var(--line-strong); }
+.legend-interactive .legend-chip.active { color: var(--ink); border-color: var(--faint); background: var(--surface-2); }
+.legend-interactive .legend-chip.faded { opacity: 0.45; }
+/* on narrow screens the point-anchored tooltip can overflow the frame; pin it to the
+   bottom of the map as a full-width card instead (overrides the inline positioning). */
+@media (max-width: 560px) {
+  .map-tip {
+    left: 0.5rem !important;
+    right: 0.5rem;
+    top: auto !important;
+    bottom: 0.5rem;
+    width: auto !important;
+    max-width: none !important;
+    max-height: 60%;
+    overflow-y: auto;
+    transform: none !important;
+    margin: 0 !important;
+  }
+}
+
 /* flow */
 .flow { width: 100%; height: auto; display: block; }
 .flow-note, .gate-note { font-family: var(--sans); font-size: 0.82rem; color: var(--muted); margin-top: 1rem; max-width: 72ch; }
