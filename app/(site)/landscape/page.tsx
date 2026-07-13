@@ -1,6 +1,7 @@
 import { PROGRAM, CONSORTIUM, LANDSCAPE, BIOPROJECTS, PUBLIC_DATA, OKABE, fmt } from "@/lib/data";
 import { BarChart } from "@/components/BarChart";
 import { ConsortiumMap } from "@/components/ConsortiumMap";
+import { AwardsTable } from "@/components/AwardsTable";
 import { DataFlow } from "@/components/DataFlow";
 import { PublicData } from "@/components/PublicData";
 
@@ -74,25 +75,8 @@ export default function Page() {
             and one Coordinating Center.
           </p>
           <ConsortiumMap />
-          <div className="table-scroll" style={{ marginTop: "1.8rem" }}>
-            <table className="awards">
-              <thead>
-                <tr>
-                  <th>Grant</th><th>Institution</th><th>Component</th><th>Investigators</th><th>Period</th>
-                </tr>
-              </thead>
-              <tbody>
-                {CONSORTIUM.awards.map((a) => (
-                  <tr key={a.grant} id={a.grant}>
-                    <td className="grant">{a.grant}</td>
-                    <td className="inst">{a.institution}</td>
-                    <td className="sans">{a.component.replace(" (CODCC)", "")}</td>
-                    <td className="sans">{a.pis}</td>
-                    <td className="mono">{a.period}</td>
-                  </tr>
-                ))}
-              </tbody>
-            </table>
+          <div style={{ marginTop: "1.8rem" }}>
+            <AwardsTable awards={CONSORTIUM.awards} />
           </div>
         </div>
       </section>

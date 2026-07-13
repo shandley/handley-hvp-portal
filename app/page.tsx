@@ -36,7 +36,7 @@ export default function Explore() {
             <div><b className="num">{CONSORTIUM.total_awards}</b><span>awards</span></div>
             <div><b className="num">{vcc}</b><span>characterization centers</span></div>
             <div><b className="num">{fmt(h.cohorts)}</b><span>cohorts</span></div>
-            <div><b className="num">{fmt(h.planned_samples)}</b><span>samples mapped</span></div>
+            <div><b className="num">{fmt(h.planned_samples)}</b><span>samples planned</span></div>
           </div>
 
           <a className="explore-cta" href="/landscape">View the data landscape &rarr;</a>
