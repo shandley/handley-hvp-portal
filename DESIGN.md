@@ -3,17 +3,28 @@
 Register: product (design serves the content). Academic/scientific, restrained.
 
 ## Theme
-Light. Scene: a researcher reading at a desk in daytime, scanning a dense synthesis
-for specific facts. Warm paper background, high legibility, no dark-dashboard drama.
+Light overall. Scene: a researcher reading at a desk in daytime, scanning a dense synthesis
+for specific facts. Warm paper background, high legibility. The one exception is a dark navy
+hero band on the landing and at the top of the landscape: it carries the landing's palette
+(cream text, faint Okabe glows) and eases down into the cream body, so moving between pages
+is not a brightness shock. It is a deliberate tonal bridge, not a dark dashboard.
 
 ## Color (OKLCH; tinted neutrals, restrained strategy)
-- `--bg`        oklch(0.985 0.004 95)   warm paper
-- `--surface`   oklch(0.965 0.005 95)   raised panels, table zebra
-- `--ink`       oklch(0.26 0.012 260)   body text (tinted near-black, never #000)
-- `--muted`     oklch(0.50 0.012 260)   secondary text, captions
-- `--line`      oklch(0.90 0.005 95)    hairline rules and borders
-- `--accent`    oklch(0.45 0.09 255)    links, active states, keylines (sober ink-blue)
-- `--accent-weak` oklch(0.95 0.02 255)  accent tint backgrounds
+`app/globals.css` `:root` is the source of truth for exact values; keep this in sync with it.
+Current tokens (warm paper hue ~85, tinted-navy ink hue ~262):
+- `--bg`         oklch(0.955 0.010 85)   warm paper
+- `--surface`    oklch(0.935 0.012 85)   raised panels, table zebra
+- `--surface-2`  oklch(0.915 0.013 85)   deeper surface (bar tracks, chips)
+- `--ink`        oklch(0.25 0.026 262)   body text (tinted near-black, never #000)
+- `--muted`      oklch(0.49 0.020 262)   secondary text, captions
+- `--faint`      oklch(0.60 0.016 262)   faint labels, kickers
+- `--line`       oklch(0.88 0.010 85)    hairline rules and borders
+- `--line-strong` oklch(0.80 0.012 85)   stronger borders, input outlines
+- `--accent`     oklch(0.48 0.13 245)    links, active states, keylines (Okabe blue family)
+- `--accent-weak` oklch(0.92 0.03 245)   accent tint backgrounds
+
+Hero band anchors (shared with the landing `app/page.tsx`):
+- `--navy`  #0a0e1a, `--navy-2` #0d1322 (the dark hero), `--cream` #f3efe6 (text on the hero)
 
 Data visualization uses the **Okabe-Ito** colorblind-safe palette (the lab's figure
 standard), never a rainbow or a decorative gradient:
