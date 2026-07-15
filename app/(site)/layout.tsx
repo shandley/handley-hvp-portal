@@ -13,11 +13,13 @@ export default function SiteLayout({ children }: { children: React.ReactNode }) 
             </span>
           </a>
           <nav className="nav" aria-label="Sections">
-            <a href="#program">Program</a>
-            <a href="#consortium">Consortium</a>
-            <a href="#data">Data landscape</a>
-            <a href="#infrastructure">Infrastructure</a>
-            <a href="#resources">Public data</a>
+            <a href="/landscape#program">Program</a>
+            <a href="/landscape#consortium">Consortium</a>
+            <a href="/landscape#data">Data landscape</a>
+            <a href="/landscape#infrastructure">Infrastructure</a>
+            <a href="/landscape#resources">Public data</a>
+            <a href="/virome">Virome methods</a>
+            <a href="/taxonomy">Taxonomy change</a>
           </nav>
           <span className="tag">independent synthesis</span>
         </div>
