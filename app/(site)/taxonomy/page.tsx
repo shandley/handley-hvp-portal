@@ -130,6 +130,20 @@ export default function Page() {
               independent reading of that public data by the Handley Lab.
             </p>
           </div>
+          <div className="tax-download">
+            <div>
+              <div className="tax-download-title">Download the crosswalk</div>
+              <p className="muted">
+                Every family and genus name from 2005 to 2024, with its status, the
+                change that ended it, the ICTV proposal, and where its members went. One
+                row per taxon, {fmt(TAXONOMY_CHANGES.meta.n_taxa)} rows. Useful for
+                updating a dataset annotated under older names.
+              </p>
+            </div>
+            <a className="tax-download-link" href="/data/ictv_taxonomy_crosswalk.csv" download>
+              ictv_taxonomy_crosswalk.csv
+            </a>
+          </div>
         </div>
       </section>
     </>
