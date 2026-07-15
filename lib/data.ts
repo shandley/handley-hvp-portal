@@ -4,6 +4,8 @@ import landscape from "@/data/data_landscape.json";
 import bioprojects from "@/data/bioprojects.json";
 import flow from "@/data/data_flow.json";
 import publicDatasets from "@/data/public_datasets.json";
+import caudovirales from "@/data/caudovirales_flow.json";
+import taxonomyChanges from "@/data/taxonomy_changes.json";
 
 export type Program = {
   name: string; mission: string; goals: string[]; phase: string;
@@ -96,3 +98,37 @@ export const COMPONENT_COLOR: Record<string, string> = {
 export function fmt(n: number): string {
   return n.toLocaleString("en-US");
 }
+
+// ---- taxonomy change (computed from ICTV MSL via ictv-reconcile) ----
+
+export type Destination = { name: string; members: number; fraction: number };
+
+export type CaudTimeline = {
+  version: string; year: number;
+  Myoviridae: number; Siphoviridae: number; Podoviridae: number;
+  order_Caudovirales: number; class_Caudoviricetes: number;
+};
+export type CaudoviralesFlow = {
+  meta: { source: string; as_of: string; note: string };
+  timeline: CaudTimeline[];
+  redistribution: Record<string, {
+    peak_species: number; last_present: string; destinations: Destination[]; note: string;
+  }>;
+};
+
+export type TaxonChange = {
+  name: string; rank: "family" | "genus";
+  first_year: number; last_year: number; first_version: string; last_version: string;
+  current: boolean; status: string; confidence: string;
+  note?: string; change_type?: string; proposal?: string;
+  destinations?: Destination[];
+  was?: { name: string; fraction: number; as_of: string }[];
+  present_years?: number[];
+};
+export type TaxonomyChanges = {
+  meta: { source: string; as_of: string; n_taxa: number; note: string };
+  taxa: TaxonChange[];
+};
+
+export const CAUDOVIRALES = caudovirales as CaudoviralesFlow;
+export const TAXONOMY_CHANGES = taxonomyChanges as unknown as TaxonomyChanges;

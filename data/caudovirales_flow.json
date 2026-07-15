@@ -1,0 +1,349 @@
+{
+ "meta": {
+  "source": "ICTV Master Species List, MSL23 (2005) to MSL40 (2024)",
+  "as_of": "MSL40 (2024)",
+  "note": "Species counts are exemplar-species counts per release. The morphology families were abolished in 2021 (MSL37); members redistributed to genome-based families, with many now assigned only to the class Caudoviricetes. Name-level data cannot place a species into a new family without its genome."
+ },
+ "timeline": [
+  {
+   "version": "MSL23",
+   "year": 2005,
+   "Myoviridae": 15,
+   "Siphoviridae": 13,
+   "Podoviridae": 8,
+   "order_Caudovirales": 36,
+   "class_Caudoviricetes": 0
+  },
+  {
+   "version": "MSL24",
+   "year": 2008,
+   "Myoviridae": 15,
+   "Siphoviridae": 13,
+   "Podoviridae": 8,
+   "order_Caudovirales": 36,
+   "class_Caudoviricetes": 0
+  },
+  {
+   "version": "MSL25",
+   "year": 2009,
+   "Myoviridae": 22,
+   "Siphoviridae": 14,
+   "Podoviridae": 42,
+   "order_Caudovirales": 78,
+   "class_Caudoviricetes": 0
+  },
+  {
+   "version": "MSL26",
+   "year": 2011,
+   "Myoviridae": 79,
+   "Siphoviridae": 14,
+   "Podoviridae": 42,
+   "order_Caudovirales": 135,
+   "class_Caudoviricetes": 0
+  },
+  {
+   "version": "MSL27",
+   "year": 2012,
+   "Myoviridae": 86,
+   "Siphoviridae": 31,
+   "Podoviridae": 44,
+   "order_Caudovirales": 161,
+   "class_Caudoviricetes": 0
+  },
+  {
+   "version": "MSL28",
+   "year": 2013,
+   "Myoviridae": 86,
+   "Siphoviridae": 31,
+   "Podoviridae": 44,
+   "order_Caudovirales": 161,
+   "class_Caudoviricetes": 0
+  },
+  {
+   "version": "MSL29",
+   "year": 2014,
+   "Myoviridae": 93,
+   "Siphoviridae": 313,
+   "Podoviridae": 50,
+   "order_Caudovirales": 456,
+   "class_Caudoviricetes": 0
+  },
+  {
+   "version": "MSL30",
+   "year": 2015,
+   "Myoviridae": 205,
+   "Siphoviridae": 374,
+   "Podoviridae": 86,
+   "order_Caudovirales": 665,
+   "class_Caudoviricetes": 0
+  },
+  {
+   "version": "MSL31",
+   "year": 2016,
+   "Myoviridae": 271,
+   "Siphoviridae": 553,
+   "Podoviridae": 132,
+   "order_Caudovirales": 956,
+   "class_Caudoviricetes": 0
+  },
+  {
+   "version": "MSL32",
+   "year": 2017,
+   "Myoviridae": 262,
+   "Siphoviridae": 604,
+   "Podoviridae": 139,
+   "order_Caudovirales": 1028,
+   "class_Caudoviricetes": 0
+  },
+  {
+   "version": "MSL33",
+   "year": 2018,
+   "Myoviridae": 262,
+   "Siphoviridae": 604,
+   "Podoviridae": 139,
+   "order_Caudovirales": 1028,
+   "class_Caudoviricetes": 0
+  },
+  {
+   "version": "MSL34",
+   "year": 2018,
+   "Myoviridae": 327,
+   "Siphoviridae": 735,
+   "Podoviridae": 169,
+   "order_Caudovirales": 1320,
+   "class_Caudoviricetes": 0
+  },
+  {
+   "version": "MSL35",
+   "year": 2019,
+   "Myoviridae": 434,
+   "Siphoviridae": 783,
+   "Podoviridae": 132,
+   "order_Caudovirales": 1967,
+   "class_Caudoviricetes": 1967
+  },
+  {
+   "version": "MSL36",
+   "year": 2020,
+   "Myoviridae": 625,
+   "Siphoviridae": 1166,
+   "Podoviridae": 130,
+   "order_Caudovirales": 2814,
+   "class_Caudoviricetes": 2814
+  },
+  {
+   "version": "MSL37",
+   "year": 2021,
+   "Myoviridae": 0,
+   "Siphoviridae": 0,
+   "Podoviridae": 0,
+   "order_Caudovirales": 0,
+   "class_Caudoviricetes": 3601
+  },
+  {
+   "version": "MSL38",
+   "year": 2022,
+   "Myoviridae": 0,
+   "Siphoviridae": 0,
+   "Podoviridae": 0,
+   "order_Caudovirales": 0,
+   "class_Caudoviricetes": 4079
+  },
+  {
+   "version": "MSL39",
+   "year": 2023,
+   "Myoviridae": 0,
+   "Siphoviridae": 0,
+   "Podoviridae": 0,
+   "order_Caudovirales": 0,
+   "class_Caudoviricetes": 4840
+  },
+  {
+   "version": "MSL40",
+   "year": 2024,
+   "Myoviridae": 0,
+   "Siphoviridae": 0,
+   "Podoviridae": 0,
+   "order_Caudovirales": 0,
+   "class_Caudoviricetes": 5799
+  }
+ ],
+ "redistribution": {
+  "Myoviridae": {
+   "peak_species": 625,
+   "last_present": "MSL36",
+   "destinations": [
+    {
+     "name": "Peduoviridae",
+     "members": 30,
+     "fraction": 0.1382
+    },
+    {
+     "name": "Kyanoviridae",
+     "members": 26,
+     "fraction": 0.1198
+    },
+    {
+     "name": "Straboviridae",
+     "members": 24,
+     "fraction": 0.1106
+    },
+    {
+     "name": "Chimalliviridae",
+     "members": 18,
+     "fraction": 0.0829
+    },
+    {
+     "name": "Lindbergviridae",
+     "members": 7,
+     "fraction": 0.0323
+    },
+    {
+     "name": "Vandenendeviridae",
+     "members": 4,
+     "fraction": 0.0184
+    },
+    {
+     "name": "Andersonviridae",
+     "members": 3,
+     "fraction": 0.0138
+    },
+    {
+     "name": "Berryhillviridae",
+     "members": 3,
+     "fraction": 0.0138
+    },
+    {
+     "name": "Connertonviridae",
+     "members": 2,
+     "fraction": 0.0092
+    },
+    {
+     "name": "Hafunaviridae",
+     "members": 1,
+     "fraction": 0.0046
+    },
+    {
+     "name": "Vertoviridae",
+     "members": 1,
+     "fraction": 0.0046
+    },
+    {
+     "name": "Winoviridae",
+     "members": 1,
+     "fraction": 0.0046
+    }
+   ],
+   "note": "Myoviridae (MSL36) was split; its members are distributed across 12 taxa in MSL40: Peduoviridae (14%), Kyanoviridae (12%), Straboviridae (11%), Chimalliviridae (8%).... 44% now have no family assignment. A species-level answer needs the genome."
+  },
+  "Siphoviridae": {
+   "peak_species": 1166,
+   "last_present": "MSL36",
+   "destinations": [
+    {
+     "name": "Casjensviridae",
+     "members": 5,
+     "fraction": 0.0137
+    },
+    {
+     "name": "Stanwilliamsviridae",
+     "members": 5,
+     "fraction": 0.0137
+    },
+    {
+     "name": "Casidaviridae",
+     "members": 4,
+     "fraction": 0.0109
+    },
+    {
+     "name": "Jeanschmidtviridae",
+     "members": 4,
+     "fraction": 0.0109
+    },
+    {
+     "name": "Mesyanzhinovviridae",
+     "members": 4,
+     "fraction": 0.0109
+    },
+    {
+     "name": "Vilmaviridae",
+     "members": 4,
+     "fraction": 0.0109
+    },
+    {
+     "name": "Colingsworthviridae",
+     "members": 3,
+     "fraction": 0.0082
+    },
+    {
+     "name": "Sarkviridae",
+     "members": 3,
+     "fraction": 0.0082
+    },
+    {
+     "name": "Aliceevansviridae",
+     "members": 2,
+     "fraction": 0.0055
+    },
+    {
+     "name": "Duneviridae",
+     "members": 2,
+     "fraction": 0.0055
+    },
+    {
+     "name": "Hodgkinviridae",
+     "members": 2,
+     "fraction": 0.0055
+    },
+    {
+     "name": "Stackebrandtviridae",
+     "members": 2,
+     "fraction": 0.0055
+    },
+    {
+     "name": "Zierdtviridae",
+     "members": 2,
+     "fraction": 0.0055
+    },
+    {
+     "name": "Leisingerviridae",
+     "members": 1,
+     "fraction": 0.0027
+    },
+    {
+     "name": "Demerecviridae",
+     "members": 1,
+     "fraction": 0.0027
+    },
+    {
+     "name": "Ehrlichviridae",
+     "members": 1,
+     "fraction": 0.0027
+    }
+   ],
+   "note": "Siphoviridae (MSL36) was split; its members are distributed across 16 taxa in MSL40: Casjensviridae (1%), Stanwilliamsviridae (1%), Casidaviridae (1%), Jeanschmidtviridae (1%).... 87% now have no family assignment. A species-level answer needs the genome."
+  },
+  "Podoviridae": {
+   "peak_species": 169,
+   "last_present": "MSL36",
+   "destinations": [
+    {
+     "name": "Saffermanviridae",
+     "members": 3,
+     "fraction": 0.0577
+    },
+    {
+     "name": "Grimontviridae",
+     "members": 2,
+     "fraction": 0.0385
+    },
+    {
+     "name": "Mktvariviridae",
+     "members": 1,
+     "fraction": 0.0192
+    }
+   ],
+   "note": "Podoviridae (MSL36) was split; its members are distributed across 3 taxa in MSL40: Saffermanviridae (6%), Grimontviridae (4%), Mktvariviridae (2%). 87% now have no family assignment. A species-level answer needs the genome."
+  }
+ }
+}

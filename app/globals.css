@@ -409,3 +409,112 @@ table.awards .inst { font-family: var(--sans); }
 /* landscape: highlight the award row targeted from the capsid click */
 table.awards tr[id] { scroll-margin-top: 74px; transition: background 400ms ease; }
 table.awards tr:target { background: var(--accent-weak); }
+
+/* virome methods: reference collection browser */
+.vf-intro { max-width: 72ch; }
+.vf-toolbar { display: flex; flex-wrap: wrap; align-items: flex-end; gap: 0.7rem 1rem; margin: 1.4rem 0 0.4rem; }
+.vf-field { display: grid; gap: 0.3rem; }
+.vf-field-label { font-family: var(--sans); font-size: 0.74rem; text-transform: uppercase; letter-spacing: 0.06em; color: var(--faint); }
+.vf-select {
+  font-family: var(--sans); font-size: 0.9rem; color: var(--ink); background: var(--surface);
+  border: 1px solid var(--line-strong); border-radius: 3px; padding: 0.45rem 0.6rem; min-width: 28ch;
+}
+.vf-select:focus-visible { outline: 2px solid var(--accent); outline-offset: 1px; border-color: var(--faint); }
+.vf-desc { max-width: 72ch; margin: 0.6rem 0 1rem; }
+.vf-statrow {
+  display: flex; flex-wrap: wrap; gap: 1.8rem; margin: 1rem 0 1.8rem; padding: 0.9rem 0;
+  border-top: 1px solid var(--line); border-bottom: 1px solid var(--line);
+}
+.vf-stat { display: grid; gap: 0.15rem; }
+.vf-stat-n { font-size: 1.15rem; color: var(--ink); }
+.vf-stat-l { font-family: var(--sans); font-size: 0.74rem; text-transform: uppercase; letter-spacing: 0.05em; color: var(--faint); }
+.vf-charts { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem 2.6rem; margin-bottom: 2.2rem; }
+@media (max-width: 760px) { .vf-charts { grid-template-columns: 1fr; } }
+.vf-tabletitle { margin: 0.4rem 0 0.8rem; }
+.vf-table .inst { font-family: var(--serif); }
+.vf-foot { margin-top: 0.8rem; font-size: 0.8rem; max-width: 72ch; }
+
+/* ============================================================
+   /taxonomy: viral taxonomy change
+   Centerpiece sits in the navy hero (the vivid exception); the rest is restrained.
+   ============================================================ */
+.tax-hero { padding-bottom: clamp(2.4rem, 5vw, 3.6rem); }
+.tax-centerpiece { margin-top: clamp(1.6rem, 4vw, 2.6rem); }
+
+.tax-flow svg { width: 100%; height: auto; display: block; }
+.tax-flow-legend {
+  display: flex; flex-wrap: wrap; gap: 0.5rem 1.2rem; margin-top: 0.6rem;
+  font-family: var(--sans); font-size: 0.8rem; color: rgba(243, 239, 230, 0.72);
+}
+.tax-flow-legend span { display: inline-flex; align-items: center; gap: 0.4rem; }
+.tax-flow-legend i { width: 0.7rem; height: 0.7rem; border-radius: 2px; display: inline-block; flex: none; }
+.tax-flow-legend i.cls {
+  width: 0.9rem; height: 0; border-radius: 0;
+  border-top: 2px dotted rgba(243, 239, 230, 0.9);
+}
+.tax-redist { margin-top: 1.6rem; transition: opacity 400ms ease; }
+.tax-redist-head {
+  font-family: var(--sans); font-size: 0.82rem; color: rgba(243, 239, 230, 0.62);
+  margin-bottom: 0.5rem; max-width: 72ch;
+}
+.tax-redist svg { width: 100%; height: auto; display: block; }
+
+/* explorer (warm paper, restrained) */
+.tax-explorer { margin-top: 1.4rem; }
+.tax-search-row { display: flex; flex-wrap: wrap; align-items: center; gap: 0.6rem 0.9rem; }
+.tax-examples { display: flex; flex-wrap: wrap; gap: 0.4rem; }
+.tax-chip {
+  font-family: var(--sans); font-size: 0.8rem; color: var(--muted);
+  background: none; border: 1px solid var(--line-strong); border-radius: 999px;
+  padding: 0.28rem 0.7rem; cursor: pointer; line-height: 1;
+  transition: color 120ms, border-color 120ms, background 120ms;
+}
+.tax-chip:hover { color: var(--ink); border-color: var(--faint); background: var(--surface); }
+
+.tax-results {
+  list-style: none; margin: 0.7rem 0 0; padding: 0;
+  border: 1px solid var(--line); border-radius: 4px; max-width: 40rem; overflow: hidden;
+}
+.tax-results li { border-top: 1px solid var(--line); }
+.tax-results li:first-child { border-top: none; }
+.tax-results button {
+  width: 100%; display: grid; grid-template-columns: 1fr auto auto; align-items: baseline;
+  gap: 0.8rem; padding: 0.5rem 0.85rem; background: none; border: none; cursor: pointer;
+  text-align: left; font-size: 0.9rem; transition: background 120ms ease;
+}
+.tax-results button:hover { background: var(--surface); }
+.tax-r-name { font-family: var(--serif); color: var(--ink); }
+.tax-r-rank { font-family: var(--sans); font-size: 0.72rem; color: var(--faint); font-variant: small-caps; letter-spacing: 0.03em; }
+.tax-r-status { font-family: var(--sans); font-size: 0.74rem; font-weight: 600; }
+
+.tax-hint { max-width: 60ch; margin-top: 1.2rem; }
+
+.tax-card { margin-top: 1.6rem; padding-top: 1.4rem; border-top: 1px solid var(--line); }
+.tax-card-head { display: flex; align-items: baseline; flex-wrap: wrap; gap: 0.6rem; }
+.tax-card-name { font-family: var(--serif); font-size: 1.35rem; font-weight: 600; letter-spacing: -0.01em; }
+.tax-card-rank { font-family: var(--sans); font-size: 0.78rem; color: var(--faint); font-variant: small-caps; letter-spacing: 0.04em; }
+.tax-card-status {
+  font-family: var(--sans); font-size: 0.72rem; font-weight: 600; text-transform: lowercase;
+  border: 1px solid; border-radius: 999px; padding: 0.1rem 0.5rem;
+}
+.tax-lifeline { width: 100%; height: auto; display: block; max-width: 760px; margin: 1rem 0 0.4rem; }
+.tax-card-line { max-width: 72ch; margin: 0.6rem 0 0.8rem; }
+.tax-card-meta {
+  display: flex; flex-wrap: wrap; gap: 0.4rem 1.4rem;
+  font-family: var(--sans); font-size: 0.8rem; color: var(--muted);
+}
+.tax-dests { margin-top: 1.1rem; }
+.tax-dests-head { font-family: var(--sans); font-size: 0.8rem; font-weight: 600; color: var(--ink); margin-bottom: 0.4rem; }
+.tax-dests ul { list-style: none; margin: 0; padding: 0; max-width: 32rem; }
+.tax-dests li {
+  display: grid; grid-template-columns: 1fr auto; gap: 0.8rem; align-items: baseline;
+  padding: 0.32rem 0; border-top: 1px solid var(--line); font-family: var(--sans); font-size: 0.85rem;
+}
+.tax-dests li:first-child { border-top: none; }
+.tax-dest-name { color: var(--ink); }
+.tax-dest-frac { color: var(--muted); font-size: 0.8rem; }
+
+@media (max-width: 560px) {
+  .tax-results button { grid-template-columns: 1fr auto; }
+  .tax-r-status { display: none; }
+}
