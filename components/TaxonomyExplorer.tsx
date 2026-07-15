@@ -5,8 +5,16 @@ import { TAXONOMY_CHANGES, OKABE, type TaxonChange } from "@/lib/data";
 
 const YEAR0 = 2005;
 const YEAR1 = 2024;
-const EXAMPLES = ["Myoviridae", "Siphoviridae", "Autographiviridae", "Flavivirus",
-  "Herpesviridae", "Reoviridae", "Straboviridae", "Coronaviridae"];
+
+// Curated examples spanning the kinds of change, all verified against the crosswalk.
+const NOTABLE: { name: string; type: string; line: string }[] = [
+  { name: "Reoviridae", type: "split", line: "into Spinareoviridae and Sedoreoviridae" },
+  { name: "Herpesviridae", type: "renamed", line: "to Orthoherpesviridae" },
+  { name: "Autographiviridae", type: "promoted", line: "to the order Autographivirales" },
+  { name: "Flavivirus", type: "renamed", line: "genus, to Orthoflavivirus" },
+  { name: "Ebolavirus", type: "renamed", line: "genus, to Orthoebolavirus" },
+  { name: "Coronaviridae", type: "current", line: "since 2005" },
+];
 
 const STATUS_STYLE: Record<string, { color: string; label: string }> = {
   current: { color: "var(--faint)", label: "unchanged" },
@@ -49,20 +57,31 @@ export function TaxonomyExplorer() {
 
   return (
     <div className="tax-explorer">
+      <div className="tax-notable">
+        <div className="tax-notable-head">Notable changes</div>
+        <div className="tax-notable-grid">
+          {NOTABLE.map((n) => {
+            const s = STATUS_STYLE[n.type] ?? STATUS_STYLE.unknown;
+            return (
+              <button key={n.name} type="button" className="tax-notable-card"
+                onClick={() => pick(n.name)}>
+                <span className="tax-notable-name">{n.name}</span>
+                <span className="tax-notable-tag" style={{ color: s.color, borderColor: s.color }}>{s.label}</span>
+                <span className="tax-notable-line">{n.line}</span>
+              </button>
+            );
+          })}
+        </div>
+      </div>
       <div className="tax-search-row">
         <input
           className="awards-search"
           type="search"
           value={query}
-          placeholder="Search a family or genus name, current or historical"
+          placeholder="Or search any family or genus name, current or historical"
           onChange={(e) => setQuery(e.target.value)}
           aria-label="Search a viral family or genus name"
         />
-        <div className="tax-examples">
-          {EXAMPLES.map((n) => (
-            <button key={n} type="button" className="tax-chip" onClick={() => pick(n)}>{n}</button>
-          ))}
-        </div>
       </div>
 
       {results.length > 0 && (

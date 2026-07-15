@@ -518,3 +518,45 @@ table.awards tr:target { background: var(--accent-weak); }
   .tax-results button { grid-template-columns: 1fr auto; }
   .tax-r-status { display: none; }
 }
+
+/* notable-changes strip: a hairline-separated grid, cards select a taxon on click */
+.tax-notable { margin-bottom: 1.4rem; }
+.tax-notable-head {
+  font-family: var(--sans); font-size: 0.78rem; font-weight: 600; color: var(--faint);
+  margin-bottom: 0.7rem;
+}
+.tax-notable-grid {
+  display: grid; grid-template-columns: repeat(3, 1fr);
+  gap: 1px; background: var(--line); border: 1px solid var(--line);
+}
+@media (max-width: 720px) { .tax-notable-grid { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 460px) { .tax-notable-grid { grid-template-columns: 1fr; } }
+.tax-notable-card {
+  background: var(--bg); border: none; cursor: pointer; text-align: left;
+  padding: 0.85rem 0.95rem; display: flex; flex-direction: column; gap: 0.3rem;
+  transition: background 120ms ease;
+}
+.tax-notable-card:hover { background: var(--surface); }
+.tax-notable-card:focus-visible { outline: 2px solid var(--accent); outline-offset: -2px; }
+.tax-notable-name { font-family: var(--serif); font-size: 1.02rem; color: var(--ink); letter-spacing: -0.01em; }
+.tax-notable-tag {
+  align-self: flex-start; font-family: var(--sans); font-size: 0.68rem; font-weight: 600;
+  border: 1px solid; border-radius: 999px; padding: 0.05rem 0.45rem;
+}
+.tax-notable-line { font-family: var(--sans); font-size: 0.82rem; color: var(--muted); line-height: 1.35; }
+
+/* crosswalk download */
+.tax-download {
+  margin-top: 2rem; padding-top: 1.6rem; border-top: 1px solid var(--line);
+  display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between;
+  gap: 1rem 2rem;
+}
+.tax-download > div { max-width: 60ch; }
+.tax-download-title { font-family: var(--sans); font-size: 0.95rem; font-weight: 600; margin-bottom: 0.35rem; }
+.tax-download .muted { margin: 0; }
+.tax-download-link {
+  font-family: var(--mono); font-size: 0.85rem; white-space: nowrap;
+  color: var(--accent); border: 1px solid var(--line-strong); border-radius: 4px;
+  padding: 0.5rem 0.9rem; transition: border-color 120ms, background 120ms;
+}
+.tax-download-link:hover { border-color: var(--accent); background: var(--accent-weak); text-decoration: none; }
