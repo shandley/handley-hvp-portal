@@ -560,3 +560,37 @@ table.awards tr:target { background: var(--accent-weak); }
   padding: 0.5rem 0.9rem; transition: border-color 120ms, background 120ms;
 }
 .tax-download-link:hover { border-color: var(--accent); background: var(--accent-weak); text-decoration: none; }
+button.tax-download-link { background: none; cursor: pointer; }
+
+/* batch reconcile */
+.tax-batch { margin-top: 0.4rem; }
+.tax-batch-input { margin: 1.2rem 0; }
+.tax-batch-text {
+  width: 100%; min-height: 8.5rem; resize: vertical;
+  font-family: var(--mono); font-size: 0.85rem; line-height: 1.5; color: var(--ink);
+  background: var(--bg); border: 1px solid var(--line-strong); border-radius: 4px;
+  padding: 0.7rem 0.85rem;
+}
+.tax-batch-text::placeholder { color: var(--faint); }
+.tax-batch-text:focus-visible { outline: 2px solid var(--accent); outline-offset: 1px; border-color: var(--faint); }
+.tax-batch-controls { display: flex; flex-wrap: wrap; align-items: center; gap: 0.6rem 0.9rem; margin-top: 0.7rem; }
+.tax-batch-col {
+  display: inline-flex; align-items: center; gap: 0.45rem;
+  font-family: var(--sans); font-size: 0.8rem; color: var(--muted);
+}
+.tax-batch-col select {
+  font-family: var(--sans); font-size: 0.82rem; color: var(--ink); background: var(--surface);
+  border: 1px solid var(--line-strong); border-radius: 3px; padding: 0.3rem 0.5rem;
+}
+.tax-batch-figs { margin: 1.4rem 0 1rem; }
+.tax-batch-preview { margin-top: 0.4rem; }
+.tax-batch-tag {
+  font-family: var(--sans); font-size: 0.7rem; font-weight: 600; white-space: nowrap;
+  border: 1px solid; border-radius: 999px; padding: 0.05rem 0.45rem;
+}
+.tax-batch-tag.b-unchanged { color: var(--faint); border-color: var(--line-strong); }
+.tax-batch-tag.b-updated { color: #007a5a; border-color: #009E73; }
+.tax-batch-tag.b-flagged { color: #9a6b00; border-color: #E69F00; }
+.tax-batch-tag.b-unrecognized { color: var(--muted); border-color: var(--line-strong); }
+.tax-batch-more { font-family: var(--sans); font-size: 0.8rem; margin-top: 0.6rem; }
+.tax-batch-caveat { margin-top: 1rem; }
