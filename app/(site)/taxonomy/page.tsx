@@ -1,6 +1,7 @@
 import { CAUDOVIRALES, TAXONOMY_CHANGES, PROGRAM, fmt } from "@/lib/data";
 import { CaudoviralesFlow } from "@/components/CaudoviralesFlow";
 import { TaxonomyExplorer } from "@/components/TaxonomyExplorer";
+import { BatchReconcile } from "@/components/BatchReconcile";
 
 export const metadata = {
   title: "Viral taxonomy change | Handley Lab HVP Portal",
@@ -102,10 +103,20 @@ export default function Page() {
         </div>
       </section>
 
-      <section id="methods" className="section-pad">
+      <section id="reconcile" className="section-pad">
         <div className="wrap">
           <div className="section-head">
             <div className="kicker">03</div>
+            <h2>Reconcile a list of names</h2>
+          </div>
+          <BatchReconcile />
+        </div>
+      </section>
+
+      <section id="methods" className="section-pad">
+        <div className="wrap">
+          <div className="section-head">
+            <div className="kicker">04</div>
             <h2>How this was computed</h2>
           </div>
           <div className="prose">
