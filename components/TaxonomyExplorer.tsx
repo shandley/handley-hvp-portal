@@ -6,14 +6,16 @@ import { TAXONOMY_CHANGES, OKABE, type TaxonChange } from "@/lib/data";
 const YEAR0 = 2005;
 const YEAR1 = 2024;
 
-// Curated examples spanning the kinds of change, all verified against the crosswalk.
-const NOTABLE: { name: string; type: string; line: string }[] = [
-  { name: "Reoviridae", type: "split", line: "into Spinareoviridae and Sedoreoviridae" },
+// Curated examples, led by the Caudovirales collapse. All verified against the
+// crosswalk. The order Caudovirales is not a family or genus the explorer traces,
+// so its card scrolls to the centerpiece chart instead of selecting a taxon.
+const NOTABLE: { name: string; type: string; line: string; scroll?: boolean }[] = [
+  { name: "Caudovirales", type: "abolished", line: "the 2021 collapse, 2,814 species", scroll: true },
+  { name: "Myoviridae", type: "split", line: "44% of genera now unassigned" },
+  { name: "Siphoviridae", type: "split", line: "87% of genera now unassigned" },
+  { name: "Podoviridae", type: "split", line: "87% of genera now unassigned" },
   { name: "Herpesviridae", type: "renamed", line: "to Orthoherpesviridae" },
   { name: "Autographiviridae", type: "promoted", line: "to the order Autographivirales" },
-  { name: "Flavivirus", type: "renamed", line: "genus, to Orthoflavivirus" },
-  { name: "Ebolavirus", type: "renamed", line: "genus, to Orthoebolavirus" },
-  { name: "Coronaviridae", type: "current", line: "since 2005" },
 ];
 
 const STATUS_STYLE: Record<string, { color: string; label: string }> = {
@@ -55,6 +57,9 @@ export function TaxonomyExplorer() {
 
   const pick = (name: string) => { setSelected(name); setQuery(""); };
 
+  const scrollToCenterpiece = () =>
+    document.getElementById("caudovirales-flow")?.scrollIntoView({ behavior: "smooth", block: "start" });
+
   return (
     <div className="tax-explorer">
       <div className="tax-notable">
@@ -64,7 +69,7 @@ export function TaxonomyExplorer() {
             const s = STATUS_STYLE[n.type] ?? STATUS_STYLE.unknown;
             return (
               <button key={n.name} type="button" className="tax-notable-card"
-                onClick={() => pick(n.name)}>
+                onClick={() => (n.scroll ? scrollToCenterpiece() : pick(n.name))}>
                 <span className="tax-notable-name">{n.name}</span>
                 <span className="tax-notable-tag" style={{ color: s.color, borderColor: s.color }}>{s.label}</span>
                 <span className="tax-notable-line">{n.line}</span>
