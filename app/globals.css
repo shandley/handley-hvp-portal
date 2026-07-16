@@ -399,19 +399,6 @@ table.awards .inst { font-family: var(--sans); }
 .area-card .ac-title { font-family: var(--sans); font-weight: 650; font-size: 1rem; color: #fbf7ef; }
 .area-card .ac-body { font-family: var(--sans); font-size: 0.82rem; line-height: 1.5; color: rgba(243,239,230,0.62); }
 
-.capsid-tip {
-  position: fixed; z-index: 50; pointer-events: none;
-  max-width: 280px; padding: 0.7rem 0.85rem;
-  background: rgba(14, 18, 30, 0.92); border: 1px solid rgba(243, 239, 230, 0.16);
-  border-radius: 6px; color: #f3efe6; font-family: var(--sans);
-  box-shadow: 0 10px 30px rgba(0,0,0,0.45); backdrop-filter: blur(3px);
-}
-.capsid-tip .tip-inst { font-weight: 650; font-size: 0.92rem; letter-spacing: -0.01em; }
-.capsid-tip .tip-comp { font-size: 0.78rem; color: rgba(243,239,230,0.62); margin-top: 0.1rem; }
-.capsid-tip .tip-grant { font-family: var(--mono); font-size: 0.76rem; color: #E69F00; margin-top: 0.4rem; }
-.capsid-tip .tip-pis { font-size: 0.78rem; color: rgba(243,239,230,0.8); margin-top: 0.3rem; line-height: 1.35; }
-.capsid-tip .tip-foot { font-size: 0.72rem; color: rgba(243,239,230,0.5); margin-top: 0.45rem; }
-
 /* landscape: highlight the award row targeted from the capsid click */
 table.awards tr[id] { scroll-margin-top: 74px; transition: background 400ms ease; }
 table.awards tr:target { background: var(--accent-weak); }
