@@ -11,7 +11,7 @@ export type HistoryEvent = {
   cite: string;
   flag?: string;
 };
-export type HistoryRef = { ref: string; doi: string };
+export type HistoryRef = { era: string; ref: string; doi?: string; url?: string };
 
 export const HISTORY_ERAS: HistoryEra[] = [
   { key: "e1", name: "Origins", span: "1890s", color: "#0072B2" },
@@ -102,13 +102,40 @@ export const HISTORY_EVENTS: HistoryEvent[] = [
     flag: "Program 2022, funding calls 2023 to 2024, first awards 2024." },
 ];
 
+// The full source set behind the timeline. Every DOI verified against PubMed or
+// CrossRef, grouped by the same eras as the timeline.
 export const HISTORY_BIB: HistoryRef[] = [
-  { ref: "Beijerinck's work on tobacco mosaic virus (Bos, Phil Trans R Soc B, 1999)", doi: "10.1098/rstb.1999.0420" },
-  { ref: "The growth of bacteriophage (Ellis and Delbruck, J Gen Physiol, 1939)", doi: "10.1085/jgp.22.3.365" },
-  { ref: "Independent functions of viral protein and nucleic acid (Hershey and Chase, J Gen Physiol, 1952)", doi: "10.1085/jgp.36.1.39" },
-  { ref: "High abundance of viruses found in aquatic environments (Bergh et al., Nature, 1989)", doi: "10.1038/340467a0" },
-  { ref: "Genomic analysis of uncultured marine viral communities (Breitbart et al., PNAS, 2002)", doi: "10.1073/pnas.202488399" },
-  { ref: "A highly abundant bacteriophage in human faecal metagenomes (Dutilh et al., Nat Commun, 2014)", doi: "10.1038/ncomms5498" },
-  { ref: "The new scope of virus taxonomy, 15 ranks and realms (Gorbalenya et al., Nat Microbiol, 2020)", doi: "10.1038/s41564-020-0709-x" },
-  { ref: "Abolishment of morphology-based taxa, 2022 ICTV update (Turner et al., Arch Virol, 2023)", doi: "10.1007/s00705-022-05694-2" },
+  // Origins
+  { era: "e1", ref: "Beijerinck's work on tobacco mosaic virus: historical context and legacy (Bos, Phil Trans R Soc B, 1999)", doi: "10.1098/rstb.1999.0420" },
+  { era: "e1", ref: "The history of research in foot-and-mouth disease (Brown, Virus Res, 2003)", doi: "10.1016/s0168-1702(02)00268-x" },
+  // The phage era
+  { era: "e2", ref: "An investigation on the nature of ultra-microscopic viruses (Twort, The Lancet, 1915)", doi: "10.1016/S0140-6736(01)20383-3" },
+  { era: "e2", ref: "At the centennial of the bacteriophage (Billiau, J Hist Biol, 2016)", doi: "10.1007/s10739-015-9429-0" },
+  { era: "e2", ref: "Felix Hubert d'Herelle: history of a scientific mind (Summers, Bacteriophage, 2017)", doi: "10.1080/21597081.2016.1270090" },
+  { era: "e2", ref: "Isolation of a crystalline protein possessing the properties of tobacco mosaic virus (Stanley, Science, 1935)", doi: "10.1126/science.81.2113.644" },
+  { era: "e2", ref: "The growth of bacteriophage (Ellis and Delbruck, J Gen Physiol, 1939)", doi: "10.1085/jgp.22.3.365" },
+  // Molecules and classification
+  { era: "e3", ref: "Helmut Ruska and the visualisation of viruses (Kruger et al., The Lancet, 2000)", doi: "10.1016/s0140-6736(00)02250-9" },
+  { era: "e3", ref: "Independent functions of viral protein and nucleic acid in growth of bacteriophage (Hershey and Chase, J Gen Physiol, 1952)", doi: "10.1085/jgp.36.1.39" },
+  { era: "e3", ref: "50 years of the International Committee on Taxonomy of Viruses (Adams et al., Arch Virol, 2017)", doi: "10.1007/s00705-016-3215-y" },
+  { era: "e3", ref: "Expression of animal virus genomes (Baltimore, Bacteriol Rev, 1971)", doi: "10.1128/br.35.3.235-241.1971" },
+  { era: "e3", ref: "Complete nucleotide sequence of bacteriophage MS2 RNA (Fiers et al., Nature, 1976)", doi: "10.1038/260500a0" },
+  { era: "e3", ref: "Nucleotide sequence of bacteriophage phiX174 DNA (Sanger et al., Nature, 1977)", doi: "10.1038/265687a0" },
+  { era: "e3", ref: "DNA sequencing with chain-terminating inhibitors (Sanger, Nicklen and Coulson, PNAS, 1977)", doi: "10.1073/pnas.74.12.5463" },
+  // The environmental turn
+  { era: "e4", ref: "High abundance of viruses found in aquatic environments (Bergh et al., Nature, 1989)", doi: "10.1038/340467a0" },
+  { era: "e4", ref: "Genomic analysis of uncultured marine viral communities (Breitbart et al., PNAS, 2002)", doi: "10.1073/pnas.202488399" },
+  { era: "e4", ref: "Metagenomic analyses of an uncultured viral community from human feces (Breitbart et al., J Bacteriol, 2003)", doi: "10.1128/JB.185.20.6220-6223.2003" },
+  { era: "e4", ref: "RNA viral community in human feces: prevalence of plant pathogenic viruses (Zhang et al., PLoS Biol, 2006)", doi: "10.1371/journal.pbio.0040003" },
+  // The human virome
+  { era: "e5", ref: "Viruses in the faecal microbiota of monozygotic twins and their mothers (Reyes et al., Nature, 2010)", doi: "10.1038/nature09199" },
+  { era: "e5", ref: "The human gut virome: inter-individual variation and dynamic response to diet (Minot et al., Genome Res, 2011)", doi: "10.1101/gr.122705.111" },
+  { era: "e5", ref: "A highly abundant bacteriophage discovered in human faecal metagenomes (Dutilh et al., Nat Commun, 2014)", doi: "10.1038/ncomms5498" },
+  { era: "e5", ref: "Global organization and proposed megataxonomy of the virus world (Koonin et al., MMBR, 2020)", doi: "10.1128/MMBR.00061-19" },
+  { era: "e5", ref: "The new scope of virus taxonomy: partitioning the virosphere into 15 hierarchical ranks (Gorbalenya et al., Nat Microbiol, 2020)", doi: "10.1038/s41564-020-0709-x" },
+  { era: "e5", ref: "The Gut Virome Database reveals age-dependent patterns of virome diversity (Gregory et al., Cell Host Microbe, 2020)", doi: "10.1016/j.chom.2020.08.003" },
+  { era: "e5", ref: "Metagenomic compendium of 189,680 DNA viruses from the human gut microbiome (Nayfach et al., Nat Microbiol, 2021)", doi: "10.1038/s41564-021-00928-6" },
+  { era: "e5", ref: "Massive expansion of human gut bacteriophage diversity (Camarillo-Guerrero et al., Cell, 2021)", doi: "10.1016/j.cell.2021.01.029" },
+  { era: "e5", ref: "Abolishment of morphology-based taxa and change to binomial species names, 2022 ICTV update (Turner et al., Arch Virol, 2023)", doi: "10.1007/s00705-022-05694-2" },
+  { era: "e5", ref: "NIH Common Fund Human Virome Program", url: "https://commonfund.nih.gov/humanvirome" },
 ];

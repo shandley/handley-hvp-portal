@@ -1,5 +1,5 @@
 import { CAUDOVIRALES, TAXONOMY_CHANGES, fmt } from "@/lib/data";
-import { HISTORY_BIB } from "@/lib/history";
+import { HISTORY_BIB, HISTORY_ERAS } from "@/lib/history";
 import { Timeline } from "@/components/Timeline";
 import { CaudoviralesFlow } from "@/components/CaudoviralesFlow";
 import { SectionNav } from "@/components/SectionNav";
@@ -116,18 +116,37 @@ export default function Page() {
             <div className="kicker">Sources</div>
             <h2>A living bibliography</h2>
           </div>
-          <p className="prose muted" style={{ marginBottom: "1.4rem" }}>
-            The foundational literature behind the timeline, verified against PubMed and CrossRef.
-            A sample; the full set is maintained as a citable resource.
+          <p className="prose muted" style={{ marginBottom: "1.6rem" }}>
+            The full literature behind the timeline, {HISTORY_BIB.length} sources, each verified
+            against PubMed or CrossRef and grouped by era. Not a curated highlight reel; this is
+            every source cited above.
           </p>
-          <ul className="biblio">
-            {HISTORY_BIB.map((b) => (
-              <li key={b.doi}>
-                {b.ref}{" "}
-                <a className="mono" href={`https://doi.org/${b.doi}`}>doi:{b.doi}</a>
-              </li>
-            ))}
-          </ul>
+          <div className="biblio">
+            {HISTORY_ERAS.map((era) => {
+              const refs = HISTORY_BIB.filter((b) => b.era === era.key);
+              if (!refs.length) return null;
+              return (
+                <div className="biblio-group" key={era.key}>
+                  <div className="biblio-era">
+                    <span className="tl-sw" style={{ background: era.color }} />
+                    {era.name}
+                  </div>
+                  <ul>
+                    {refs.map((b, i) => (
+                      <li key={i}>
+                        {b.ref}{" "}
+                        {b.doi ? (
+                          <a className="mono" href={`https://doi.org/${b.doi}`}>doi:{b.doi}</a>
+                        ) : b.url ? (
+                          <a className="mono" href={b.url}>{b.url}</a>
+                        ) : null}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              );
+            })}
+          </div>
         </div>
       </section>
     </>

@@ -420,7 +420,9 @@ table.awards .inst { font-family: var(--sans); }
 .tl-flag { font-family: var(--sans); font-size: 0.76rem; color: var(--accent); margin-top: 0.2rem; }
 
 /* bibliography */
-.biblio { list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 0.6rem; max-width: var(--prose); }
+.biblio { padding: 0; margin: 0; display: flex; flex-direction: column; gap: 1.7rem; max-width: var(--prose); }
+.biblio-era { font-family: var(--sans); font-size: 0.78rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em; color: var(--muted); display: flex; align-items: center; gap: 0.5rem; margin-bottom: 0.7rem; }
+.biblio-group ul { list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 0.6rem; }
 .biblio li { font-family: var(--sans); font-size: 0.86rem; color: var(--ink); line-height: 1.5; }
 .biblio li .mono { font-size: 0.78rem; color: var(--muted); }
 
