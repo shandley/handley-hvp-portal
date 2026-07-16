@@ -15,7 +15,7 @@ export default function SiteLayout({ children }: { children: React.ReactNode }) 
           <nav className="nav" aria-label="Sections">
             <a href="/virome">Methods</a>
             <a href="/taxonomy">Taxonomy</a>
-            <a href="/landscape">HVP program</a>
+            <a href="/data">Public data</a>
           </nav>
         </div>
       </header>
