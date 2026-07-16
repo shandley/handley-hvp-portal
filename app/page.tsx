@@ -1,15 +1,32 @@
 import type { Metadata } from "next";
 import CapsidBackground from "@/components/CapsidBackground";
-import { PROGRAM, CONSORTIUM, LANDSCAPE, fmt } from "@/lib/data";
 
 export const metadata: Metadata = {
-  title: "The human virome · Handley Lab",
-  description: "An independent Handley Lab synthesis of the NIH Human Virome Program.",
+  title: "Handley Lab Virome",
+  description:
+    "The Handley Lab's virome methods, tools, data views, and independent syntheses, across human and environmental viromes.",
 };
 
-export default function Explore() {
-  const h = LANDSCAPE.headline;
-  const vcc = CONSORTIUM.counts_by_component["Virome Characterization Center"] ?? 5;
+const AREAS = [
+  {
+    href: "/virome",
+    title: "Virome methods",
+    body: "ViroForge and virome-qc, and an opinionated guide to contamination and site-specific virome analysis.",
+  },
+  {
+    href: "/taxonomy",
+    title: "Taxonomy",
+    body: "Version-controlled viral taxonomy and the Caudovirales reclassification.",
+  },
+  {
+    href: "/landscape",
+    title: "HVP program landscape",
+    body: "An independent synthesis of the NIH Human Virome Program: consortium, awards, data landscape, and public data.",
+    tag: "Independent reference · not an official HVP product",
+  },
+];
+
+export default function Home() {
   return (
     <div className="explore">
       <CapsidBackground />
@@ -17,35 +34,32 @@ export default function Explore() {
 
       <div className="explore-inner">
         <div className="explore-top">
-          <span className="brand-lite">Handley Lab</span>
-          <a href="/landscape">the landscape &rarr;</a>
+          <span className="brand-lite">Handley Lab Virome</span>
         </div>
 
         <div className="explore-hero">
-          <div className="kicker light">An independent synthesis &middot; the human virome</div>
+          <div className="kicker light">Handley Lab &middot; Washington University in St. Louis</div>
           <h1 className="display">
-            Most human viruses<br />are still unknown.
+            Most viruses<br />are still unknown.
           </h1>
           <p className="explore-lead">
-            The NIH Human Virome Program is the first coordinated effort to catalog them across
-            the human body and the human lifespan. This is the Handley Lab&apos;s independent
-            reading of that effort, drawn from public program records.
+            The Handley Lab studies viromes across the human body and beyond, from healthy and
+            diseased human samples to environmental communities. This site collects the
+            lab&apos;s methods, tools, data views, and independent syntheses.
           </p>
 
-          <div className="explore-stats">
-            <div><b className="num">{CONSORTIUM.total_awards}</b><span>awards</span></div>
-            <div><b className="num">{vcc}</b><span>characterization centers</span></div>
-            <div><b className="num">{fmt(h.cohorts)}</b><span>cohorts</span></div>
-            <div><b className="num">{fmt(h.planned_samples)}</b><span>samples planned</span></div>
+          <div className="explore-areas">
+            {AREAS.map((a) => (
+              <a className="area-card" href={a.href} key={a.href}>
+                <span className="ac-title">{a.title}</span>
+                <span className="ac-body">{a.body}</span>
+                {a.tag && <span className="ac-tag">{a.tag}</span>}
+              </a>
+            ))}
           </div>
-
-          <a className="explore-cta" href="/landscape">View the data landscape &rarr;</a>
         </div>
 
-        <p className="explore-foot">
-          Handley Lab, Washington University in St. Louis &middot; not an official HVP product
-          &middot; data as of {PROGRAM.data_as_of}
-        </p>
+        <p className="explore-foot">Handley Lab, Washington University in St. Louis</p>
       </div>
     </div>
   );

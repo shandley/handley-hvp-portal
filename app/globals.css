@@ -393,6 +393,13 @@ table.awards .inst { font-family: var(--sans); }
 .explore-inner { pointer-events: none; }
 .explore-inner a, .explore-inner button { pointer-events: auto; }
 
+.explore-areas { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 0.9rem; margin-top: 2.3rem; max-width: 780px; }
+.area-card { display: flex; flex-direction: column; gap: 0.35rem; padding: 1rem 1.1rem; border: 1px solid rgba(243,239,230,0.16); border-radius: 12px; background: rgba(243,239,230,0.03); transition: border-color 140ms ease, background 140ms ease; }
+.area-card:hover { border-color: rgba(243,239,230,0.4); background: rgba(243,239,230,0.06); text-decoration: none; }
+.area-card .ac-title { font-family: var(--sans); font-weight: 650; font-size: 1rem; color: #fbf7ef; }
+.area-card .ac-body { font-family: var(--sans); font-size: 0.82rem; line-height: 1.5; color: rgba(243,239,230,0.62); }
+.area-card .ac-tag { font-family: var(--sans); font-size: 0.66rem; letter-spacing: 0.04em; text-transform: uppercase; color: rgba(243,239,230,0.5); border: 1px solid rgba(243,239,230,0.18); border-radius: 999px; padding: 0.15rem 0.55rem; margin-top: 0.4rem; align-self: flex-start; }
+
 .capsid-tip {
   position: fixed; z-index: 50; pointer-events: none;
   max-width: 280px; padding: 0.7rem 0.85rem;
