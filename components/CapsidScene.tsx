@@ -1,15 +1,16 @@
 "use client";
 
-import { useLayoutEffect, useMemo, useRef, useState } from "react";
-import { Canvas, useFrame, useThree, type ThreeEvent } from "@react-three/fiber";
+import { useLayoutEffect, useMemo, useRef } from "react";
+import { Canvas, useFrame, useThree } from "@react-three/fiber";
 import * as THREE from "three";
-import { CONSORTIUM, COMPONENT_COLOR, type Award } from "@/lib/data";
 
 const AMBIENT = 110;
+const FOREGROUND = 21;
 const BG = "#0a0e1a";
 const dummy = new THREE.Object3D();
 
-export type HoverInfo = { award: Award; x: number; y: number } | null;
+// Okabe-Ito palette for the foreground capsids (decorative only).
+const PALETTE = ["#0072B2", "#009E73", "#D55E00", "#E69F00", "#56B4E9", "#CC79A7"];
 
 /* ---- ambient background field (instanced, non-interactive) ---- */
 type Cell = { x: number; y: number; z: number; rx: number; ry: number; rz: number; spin: number; drift: number; s: number };
@@ -51,12 +52,11 @@ function AmbientField({ animate }: { animate: boolean }) {
   );
 }
 
-/* ---- data capsids: one per award, interactive ---- */
-type Node = { award: Award; x: number; y: number; z: number; s: number; phase: number; spin: number; color: string };
+/* ---- foreground capsids: decorative, non-interactive ---- */
+type Node = { x: number; y: number; z: number; s: number; phase: number; spin: number; color: string };
 function makeNodes(): Node[] {
-  const awards = CONSORTIUM.awards;
   const placed: Node[] = [];
-  for (let i = 0; i < awards.length; i++) {
+  for (let i = 0; i < FOREGROUND; i++) {
     // golden-angle spiral, biased to the right of the headline, foreground depth
     const a = i * 2.399963;
     const r = 3.4 + (i % 6) * 1.15;
@@ -66,21 +66,16 @@ function makeNodes(): Node[] {
     x = Math.max(-3.5, Math.min(15.5, x));
     y = Math.max(-7, Math.min(7, y));
     placed.push({
-      award: awards[i], x, y, z,
+      x, y, z,
       s: 0.85 + Math.random() * 0.7,
       phase: Math.random() * 6.28, spin: 0.2 + Math.random() * 0.3,
-      color: COMPONENT_COLOR[awards[i].component] ?? "#e9e3d6",
+      color: PALETTE[i % PALETTE.length],
     });
   }
   return placed;
 }
 
-function DataCapsid({
-  node, hovered, onOver, onOut, onSelect,
-}: {
-  node: Node; hovered: boolean;
-  onOver: (e: ThreeEvent<PointerEvent>) => void; onOut: () => void; onSelect: () => void;
-}) {
+function Capsid({ node }: { node: Node }) {
   const ref = useRef<THREE.Mesh>(null!);
   const rot = useRef({ rx: Math.random() * 6.28, ry: Math.random() * 6.28 });
   useFrame((state, delta) => {
@@ -90,52 +85,21 @@ function DataCapsid({
     m.rotation.set(rot.current.rx, rot.current.ry, 0);
     const bob = Math.sin(state.clock.elapsedTime * 0.5 + node.phase) * 0.22;
     m.position.set(node.x, node.y + bob, node.z);
-    const target = node.s * (hovered ? 1.32 : 1);
-    m.scale.setScalar(THREE.MathUtils.lerp(m.scale.x, target, 0.16));
   });
   return (
-    <mesh
-      ref={ref} position={[node.x, node.y, node.z]}
-      onPointerOver={(e) => { e.stopPropagation(); onOver(e); }}
-      onPointerMove={(e) => { e.stopPropagation(); onOver(e); }}
-      onPointerOut={() => onOut()}
-      onClick={(e) => { e.stopPropagation(); onSelect(); }}
-    >
+    <mesh ref={ref} position={[node.x, node.y, node.z]} raycast={() => null}>
       <icosahedronGeometry args={[1, 1]} />
       <meshStandardMaterial
-        color={node.color} emissive={node.color}
-        emissiveIntensity={hovered ? 0.55 : 0.14}
+        color={node.color} emissive={node.color} emissiveIntensity={0.14}
         roughness={0.34} metalness={0.22} flatShading
       />
     </mesh>
   );
 }
 
-function DataCapsids({ onHover, onSelect }: {
-  onHover: (info: HoverInfo) => void; onSelect: (a: Award) => void;
-}) {
+function Capsids() {
   const nodes = useMemo(makeNodes, []);
-  const [hoverId, setHoverId] = useState<number | null>(null);
-  return (
-    <>
-      {nodes.map((n, i) => (
-        <DataCapsid
-          key={n.award.grant} node={n} hovered={hoverId === i}
-          onOver={(e) => {
-            setHoverId(i);
-            document.body.style.cursor = "pointer";
-            onHover({ award: n.award, x: e.clientX, y: e.clientY });
-          }}
-          onOut={() => {
-            setHoverId((cur) => (cur === i ? null : cur));
-            document.body.style.cursor = "";
-            onHover(null);
-          }}
-          onSelect={() => onSelect(n.award)}
-        />
-      ))}
-    </>
-  );
+  return <>{nodes.map((n, i) => <Capsid key={i} node={n} />)}</>;
 }
 
 function Rig({ animate }: { animate: boolean }) {
@@ -149,18 +113,13 @@ function Rig({ animate }: { animate: boolean }) {
   return null;
 }
 
-export default function CapsidScene({
-  animate, onHover, onSelect,
-}: {
-  animate: boolean; onHover: (info: HoverInfo) => void; onSelect: (a: Award) => void;
-}) {
+export default function CapsidScene({ animate }: { animate: boolean }) {
   return (
     <Canvas
       camera={{ position: [0, 0, 12], fov: 46 }}
       dpr={[1, 1.8]}
       gl={{ antialias: true, powerPreference: "high-performance" }}
       frameloop={animate ? "always" : "demand"}
-      onPointerMissed={() => onHover(null)}
     >
       <color attach="background" args={[BG]} />
       <fogExp2 attach="fog" args={[BG, 0.05]} />
@@ -170,7 +129,7 @@ export default function CapsidScene({
       <directionalLight position={[2, -8, -4]} intensity={0.7} color="#CC79A7" />
       <pointLight position={[0, 0, 9]} intensity={26} distance={34} color="#fbf7ef" />
       <AmbientField animate={animate} />
-      <DataCapsids onHover={onHover} onSelect={onSelect} />
+      <Capsids />
       <Rig animate={animate} />
     </Canvas>
   );
