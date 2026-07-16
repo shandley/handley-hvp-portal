@@ -28,15 +28,14 @@ export default function SiteLayout({ children }: { children: React.ReactNode }) 
             <div>
               <h3>About Handley Lab Virome</h3>
               <p>
-                The Handley Lab&apos;s virome work: methods, tools, data views, and independent
-                syntheses across human and environmental viromes, maintained at Washington
-                University in St. Louis.
+                The Handley Lab&apos;s virome work: methods, tools, data views, and resources
+                across human and environmental viromes, maintained at Washington University in
+                St. Louis.
               </p>
               <p className="muted">
-                The HVP program landscape here is an independent reference on the NIH Human
-                Virome Program. It is not an official HVP product and does not speak for the
-                consortium. Program facts come from public sources (NIH RePORTER, NCBI, program
-                announcements).
+                The NIH Human Virome Program overview on this site is not an official HVP product
+                and does not speak for the consortium. Program facts come from public sources
+                (NIH RePORTER, NCBI, program announcements).
               </p>
             </div>
             <div>

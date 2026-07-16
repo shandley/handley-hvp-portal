@@ -4,7 +4,7 @@ import CapsidBackground from "@/components/CapsidBackground";
 export const metadata: Metadata = {
   title: "Handley Lab Virome",
   description:
-    "The Handley Lab's virome methods, tools, data views, and independent syntheses, across human and environmental viromes.",
+    "The Handley Lab's virome methods, tools, data views, and resources, across human and environmental viromes.",
 };
 
 const AREAS = [
@@ -20,9 +20,8 @@ const AREAS = [
   },
   {
     href: "/landscape",
-    title: "HVP program landscape",
-    body: "An independent synthesis of the NIH Human Virome Program: consortium, awards, data landscape, and public data.",
-    tag: "Independent reference · not an official HVP product",
+    title: "NIH Human Virome Program",
+    body: "An overview of the program: the consortium, awards, data-generation landscape, release status, and public data.",
   },
 ];
 
@@ -45,7 +44,7 @@ export default function Home() {
           <p className="explore-lead">
             The Handley Lab studies viromes across the human body and beyond, from healthy and
             diseased human samples to environmental communities. This site collects the
-            lab&apos;s methods, tools, data views, and independent syntheses.
+            lab&apos;s methods, tools, data views, and resources.
           </p>
 
           <div className="explore-areas">
@@ -53,7 +52,6 @@ export default function Home() {
               <a className="area-card" href={a.href} key={a.href}>
                 <span className="ac-title">{a.title}</span>
                 <span className="ac-body">{a.body}</span>
-                {a.tag && <span className="ac-tag">{a.tag}</span>}
               </a>
             ))}
           </div>
