@@ -399,6 +399,31 @@ table.awards .inst { font-family: var(--sans); }
 .area-card .ac-title { font-family: var(--sans); font-weight: 650; font-size: 1rem; color: #fbf7ef; }
 .area-card .ac-body { font-family: var(--sans); font-size: 0.82rem; line-height: 1.5; color: rgba(243,239,230,0.62); }
 
+/* history timeline */
+.tl { margin-top: 0.5rem; }
+.tl-legend { display: flex; flex-wrap: wrap; gap: 1rem 1.4rem; margin-bottom: 1.8rem; font-family: var(--sans); font-size: 0.8rem; color: var(--muted); }
+.tl-li { display: flex; align-items: center; gap: 0.4rem; }
+.tl-sw { width: 11px; height: 11px; border-radius: 3px; display: inline-block; }
+.tl-era { display: flex; align-items: center; gap: 0.65rem; margin: 2rem 0 0.9rem; }
+.tl-era h3 { font-family: var(--serif); font-size: 1.15rem; font-weight: 600; margin: 0; }
+.tl-era .tl-span { font-family: var(--mono); font-size: 0.78rem; color: var(--muted); margin-left: auto; }
+.tl-ev { display: grid; grid-template-columns: 58px 22px 1fr; column-gap: 0.9rem; align-items: start; }
+.tl-yr { font-family: var(--mono); font-size: 0.82rem; color: var(--muted); text-align: right; padding-top: 1px; font-variant-numeric: tabular-nums; }
+.tl-rail { position: relative; display: flex; justify-content: center; }
+.tl-rail::before { content: ""; position: absolute; top: 0; bottom: -1.6rem; width: 2px; background: var(--line); }
+.tl-ev:last-child .tl-rail::before { bottom: auto; height: 10px; }
+.tl-dot { width: 11px; height: 11px; border-radius: 50%; margin-top: 4px; z-index: 1; border: 2px solid var(--bg); }
+.tl-body { padding-bottom: 1.6rem; }
+.tl-body h4 { font-family: var(--serif); font-size: 1.02rem; font-weight: 600; margin: 0 0 0.2rem; }
+.tl-body p { font-family: var(--sans); font-size: 0.88rem; color: var(--muted); margin: 0 0 0.35rem; line-height: 1.5; }
+.tl-cite { font-family: var(--sans); font-size: 0.78rem; color: var(--faint); font-style: italic; }
+.tl-flag { font-family: var(--sans); font-size: 0.76rem; color: var(--accent); margin-top: 0.2rem; }
+
+/* bibliography */
+.biblio { list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 0.6rem; max-width: var(--prose); }
+.biblio li { font-family: var(--sans); font-size: 0.86rem; color: var(--ink); line-height: 1.5; }
+.biblio li .mono { font-size: 0.78rem; color: var(--muted); }
+
 /* landscape: highlight the award row targeted from the capsid click */
 table.awards tr[id] { scroll-margin-top: 74px; transition: background 400ms ease; }
 table.awards tr:target { background: var(--accent-weak); }

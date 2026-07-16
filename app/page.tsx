@@ -14,9 +14,9 @@ const AREAS = [
     body: "ViroForge and virome-qc, and an opinionated guide to contamination and site-specific virome analysis.",
   },
   {
-    href: "/taxonomy",
-    title: "Taxonomy",
-    body: "Version-controlled viral taxonomy and the Caudovirales reclassification.",
+    href: "/history",
+    title: "History",
+    body: "The history of the virome as a sourced timeline, with a chapter on how viral classification changed.",
   },
   {
     href: "/data",
