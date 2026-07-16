@@ -424,6 +424,18 @@ table.awards .inst { font-family: var(--sans); }
 .biblio li { font-family: var(--sans); font-size: 0.86rem; color: var(--ink); line-height: 1.5; }
 .biblio li .mono { font-size: 0.78rem; color: var(--muted); }
 
+/* sticky in-page section nav for long pages */
+.secnav { position: sticky; top: 58px; z-index: 15; background: color-mix(in oklch, var(--bg) 90%, transparent); backdrop-filter: saturate(1.2) blur(8px); border-bottom: 1px solid var(--line); }
+.secnav-in { display: flex; align-items: center; gap: 1.3rem; height: 46px; overflow-x: auto; font-family: var(--sans); font-size: 0.85rem; }
+.secnav-lbl { font-size: 0.72rem; letter-spacing: 0.06em; text-transform: uppercase; color: var(--faint); white-space: nowrap; }
+.secnav a { color: var(--muted); white-space: nowrap; padding: 0.3rem 0; border-bottom: 2px solid transparent; }
+.secnav a:hover { color: var(--ink); text-decoration: none; }
+.secnav a.on { color: var(--ink); border-bottom-color: var(--accent); }
+#timeline, #classification, #bibliography { scroll-margin-top: 112px; }
+
+/* dark band for charts built on the dark palette (e.g. the Caudovirales flow) */
+.flow-dark { background: var(--navy); color: var(--cream); border-radius: 14px; padding: clamp(1.1rem, 3vw, 1.9rem); }
+
 /* landscape: highlight the award row targeted from the capsid click */
 table.awards tr[id] { scroll-margin-top: 74px; transition: background 400ms ease; }
 table.awards tr:target { background: var(--accent-weak); }

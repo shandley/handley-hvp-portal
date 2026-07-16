@@ -2,6 +2,13 @@ import { CAUDOVIRALES, TAXONOMY_CHANGES, fmt } from "@/lib/data";
 import { HISTORY_BIB } from "@/lib/history";
 import { Timeline } from "@/components/Timeline";
 import { CaudoviralesFlow } from "@/components/CaudoviralesFlow";
+import { SectionNav } from "@/components/SectionNav";
+
+const SECTIONS = [
+  { id: "timeline", label: "Timeline" },
+  { id: "classification", label: "The great reclassification" },
+  { id: "bibliography", label: "Sources" },
+];
 
 export const metadata = {
   title: "A history of the virome · Handley Lab Virome",
@@ -44,6 +51,8 @@ export default function Page() {
         </div>
       </section>
 
+      <SectionNav sections={SECTIONS} />
+
       <section id="timeline" className="section-pad">
         <div className="wrap">
           <Timeline />
@@ -66,7 +75,9 @@ export default function Page() {
           </p>
         </div>
         <div className="wrap" id="caudovirales-flow">
-          <CaudoviralesFlow />
+          <div className="flow-dark">
+            <CaudoviralesFlow />
+          </div>
         </div>
         <div className="wrap">
           <div className="cols two" style={{ marginTop: "2rem" }}>
