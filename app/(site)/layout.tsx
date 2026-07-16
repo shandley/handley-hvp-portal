@@ -33,9 +33,8 @@ export default function SiteLayout({ children }: { children: React.ReactNode }) 
                 St. Louis.
               </p>
               <p className="muted">
-                The NIH Human Virome Program overview on this site is not an official HVP product
-                and does not speak for the consortium. Program facts come from public sources
-                (NIH RePORTER, NCBI, program announcements).
+                Program facts come from public sources (NIH RePORTER, NCBI, program
+                announcements).
               </p>
             </div>
             <div>

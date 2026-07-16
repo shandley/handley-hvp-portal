@@ -26,7 +26,6 @@ export default function Page() {
               Figures distinguish what is planned from what is in hand.
             </p>
             <div className="disclaimer">
-              <span>Not an official HVP product.</span>
               <span>Data as of <span className="mono">{PROGRAM.data_as_of}</span>.</span>
             </div>
           </div>
