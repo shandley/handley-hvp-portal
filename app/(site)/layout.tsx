@@ -5,23 +5,18 @@ export default function SiteLayout({ children }: { children: React.ReactNode }) 
     <>
       <header className="site-header">
         <div className="wrap">
-          <a className="brand" href="/" aria-label="Handley Lab HVP Portal home">
+          <a className="brand" href="/" aria-label="Handley Lab Virome home">
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img src="/logo-placeholder.svg" alt="" width={28} height={28} />
             <span>
-              <strong>Handley Lab</strong> <span className="sub">· HVP Portal</span>
+              <strong>Handley Lab Virome</strong>
             </span>
           </a>
           <nav className="nav" aria-label="Sections">
-            <a href="/landscape#program">Program</a>
-            <a href="/landscape#consortium">Consortium</a>
-            <a href="/landscape#data">Data landscape</a>
-            <a href="/landscape#infrastructure">Infrastructure</a>
-            <a href="/landscape#resources">Public data</a>
-            <a href="/virome">Virome methods</a>
-            <a href="/taxonomy">Taxonomy change</a>
+            <a href="/virome">Methods</a>
+            <a href="/taxonomy">Taxonomy</a>
+            <a href="/landscape">HVP program</a>
           </nav>
-          <span className="tag">independent synthesis</span>
         </div>
       </header>
 
@@ -31,16 +26,15 @@ export default function SiteLayout({ children }: { children: React.ReactNode }) 
         <div className="wrap">
           <div className="foot-grid">
             <div>
-              <h3>About this portal</h3>
+              <h3>About Handley Lab Virome</h3>
               <p>
-                An independent synthesis of the NIH Human Virome Program, maintained by
-                the Handley Lab at Washington University in St. Louis. It is not an
-                official HVP product and does not speak for the consortium.
+                The Handley Lab&apos;s virome work: methods, tools, data views, and resources
+                across human and environmental viromes, maintained at Washington University in
+                St. Louis.
               </p>
               <p className="muted">
                 Program facts come from public sources (NIH RePORTER, NCBI, program
-                announcements). Data-generation figures are the lab&apos;s aggregate synthesis;
-                per-group specifics are withheld until the underlying data is public.
+                announcements).
               </p>
             </div>
             <div>

@@ -2,9 +2,9 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "The Human Virome Program, synthesized · Handley Lab",
+  title: "Handley Lab Virome",
   description:
-    "An independent Handley Lab synthesis of the NIH Human Virome Program: consortium, data-generation landscape, and infrastructure.",
+    "The Handley Lab's virome methods, tools, data views, and resources, across human and environmental viromes.",
   icons: { icon: "/logo-placeholder.svg" },
 };
 

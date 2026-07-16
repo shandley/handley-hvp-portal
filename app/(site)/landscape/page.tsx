@@ -18,16 +18,14 @@ export default function Page() {
       <section className="hero">
         <div className="wrap">
           <div className="prose">
-            <div className="kicker">Handley Lab · a synthesis</div>
-            <h1>The Human Virome Program, synthesized.</h1>
+            <div className="kicker">NIH Human Virome Program</div>
+            <h1>The NIH Human Virome Program.</h1>
             <p className="standfirst">
-              An independent reading of the NIH Human Virome Program: the consortium behind it,
-              the data it is generating across the human body, and the infrastructure that moves
-              that data. Assembled and interpreted by the Handley Lab, kept honest about what is
-              planned versus in hand.
+              An overview of the NIH Human Virome Program: the consortium behind it, the data it
+              is generating across the human body, and the infrastructure that moves that data.
+              Figures distinguish what is planned from what is in hand.
             </p>
             <div className="disclaimer">
-              <span>Independent synthesis, not an official HVP product.</span>
               <span>Data as of <span className="mono">{PROGRAM.data_as_of}</span>.</span>
             </div>
           </div>
