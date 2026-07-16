@@ -19,9 +19,9 @@ const AREAS = [
     body: "Version-controlled viral taxonomy and the Caudovirales reclassification.",
   },
   {
-    href: "/landscape",
-    title: "NIH Human Virome Program",
-    body: "An overview of the program: the consortium, awards, data-generation landscape, release status, and public data.",
+    href: "/data",
+    title: "Public data resources",
+    body: "A curated selection of public human-virome datasets and reference resources, with the reanalysis-ready ones flagged.",
   },
 ];
 
