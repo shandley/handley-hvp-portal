@@ -399,25 +399,38 @@ table.awards .inst { font-family: var(--sans); }
 .area-card .ac-title { font-family: var(--sans); font-weight: 650; font-size: 1rem; color: #fbf7ef; }
 .area-card .ac-body { font-family: var(--sans); font-size: 0.82rem; line-height: 1.5; color: rgba(243,239,230,0.62); }
 
-/* history timeline */
-.tl { margin-top: 0.5rem; }
-.tl-legend { display: flex; flex-wrap: wrap; gap: 1rem 1.4rem; margin-bottom: 1.8rem; font-family: var(--sans); font-size: 0.8rem; color: var(--muted); }
-.tl-li { display: flex; align-items: center; gap: 0.4rem; }
 .tl-sw { width: 11px; height: 11px; border-radius: 3px; display: inline-block; }
-.tl-era { display: flex; align-items: center; gap: 0.65rem; margin: 2rem 0 0.9rem; }
-.tl-era h3 { font-family: var(--serif); font-size: 1.15rem; font-weight: 600; margin: 0; }
-.tl-era .tl-span { font-family: var(--mono); font-size: 0.78rem; color: var(--muted); margin-left: auto; }
-.tl-ev { display: grid; grid-template-columns: 58px 22px 1fr; column-gap: 0.9rem; align-items: start; }
-.tl-yr { font-family: var(--mono); font-size: 0.82rem; color: var(--muted); text-align: right; padding-top: 1px; font-variant-numeric: tabular-nums; }
-.tl-rail { position: relative; display: flex; justify-content: center; }
-.tl-rail::before { content: ""; position: absolute; top: 0; bottom: -1.6rem; width: 2px; background: var(--line); }
-.tl-ev:last-child .tl-rail::before { bottom: auto; height: 10px; }
-.tl-dot { width: 11px; height: 11px; border-radius: 50%; margin-top: 4px; z-index: 1; border: 2px solid var(--bg); }
-.tl-body { padding-bottom: 1.6rem; }
-.tl-body h4 { font-family: var(--serif); font-size: 1.02rem; font-weight: 600; margin: 0 0 0.2rem; }
-.tl-body p { font-family: var(--sans); font-size: 0.88rem; color: var(--muted); margin: 0 0 0.35rem; line-height: 1.5; }
-.tl-cite { font-family: var(--sans); font-size: 0.78rem; color: var(--faint); font-style: italic; }
-.tl-flag { font-family: var(--sans); font-size: 0.76rem; color: var(--accent); margin-top: 0.2rem; }
+
+/* history timeline: horizontal ribbon + true-scale axis */
+.htl-cap { font-size: 0.8rem; color: var(--muted); margin: 0 0 0.4rem; }
+.htl-cap b { color: var(--ink); font-weight: 600; }
+.htl-axis { width: 100%; height: auto; display: block; overflow: visible; }
+.htl-band { opacity: 0.10; }
+.htl-base { stroke: var(--line); stroke-width: 1.5; }
+.htl-tick { stroke: var(--line); stroke-width: 1; }
+.htl-tick-lbl { fill: var(--muted); font-size: 11px; font-family: var(--mono); }
+.htl-era-lbl { fill: var(--muted); font-size: 10.5px; font-family: var(--sans); }
+.htl-dot { transition: r 0.2s ease, fill-opacity 0.2s ease; }
+.htl-ind { stroke: var(--ink); stroke-width: 1; stroke-dasharray: 2 3; opacity: 0.5; }
+.htl-ribbon-head { display: flex; align-items: center; justify-content: space-between; margin: 1.6rem 0 0.7rem; }
+.htl-t { font-family: var(--serif); font-size: 1.1rem; font-weight: 600; }
+.htl-hint { font-size: 0.8rem; color: var(--muted); }
+.htl-ribbon { display: flex; gap: 1.1rem; overflow-x: auto; scroll-snap-type: x mandatory;
+  padding: 0.4rem max(0px, calc(50% - 165px)) 1.2rem; scroll-behavior: smooth;
+  scrollbar-width: thin; scrollbar-color: var(--line) transparent; }
+.htl-ribbon::-webkit-scrollbar { height: 8px; }
+.htl-ribbon::-webkit-scrollbar-thumb { background: var(--line); border-radius: 6px; }
+.htl-card { flex: 0 0 330px; scroll-snap-align: center; background: var(--surface);
+  border: 1px solid var(--line); border-radius: 14px; padding: 18px 20px; min-height: 250px;
+  display: flex; flex-direction: column; border-top: 3px solid var(--c);
+  transition: transform 0.25s ease, opacity 0.25s ease, box-shadow 0.25s ease; opacity: 0.5; }
+.htl-card.on { opacity: 1; transform: translateY(-4px); box-shadow: 0 10px 30px rgba(40, 36, 28, 0.10); }
+.htl-yr { font-family: var(--mono); font-size: 30px; font-weight: 500; letter-spacing: -0.02em; color: var(--c); }
+.htl-cera { font-size: 10.5px; letter-spacing: 0.06em; text-transform: uppercase; color: var(--muted); margin-top: 2px; }
+.htl-card h3 { font-family: var(--serif); font-size: 1.3rem; font-weight: 600; margin: 12px 0 8px; letter-spacing: -0.01em; }
+.htl-card p { font-size: 0.88rem; color: var(--muted); margin: 0; line-height: 1.5; flex: 1; }
+.htl-cite { font-size: 0.78rem; font-style: italic; color: var(--muted); margin-top: 12px; }
+@media (prefers-reduced-motion: reduce) { .htl-ribbon { scroll-behavior: auto; } .htl-card, .htl-dot { transition: none; } }
 
 /* bibliography */
 .biblio { padding: 0; margin: 0; display: flex; flex-direction: column; gap: 1.7rem; max-width: var(--prose); }
